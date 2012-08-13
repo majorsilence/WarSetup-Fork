@@ -13,12 +13,17 @@ namespace WarSetup
     {
         private Thread _worker;
         private ManualResetEvent _event;
+        private bool _showFinish;
 
         private delegate void SetInfoDelegate(string text, int progress);
         
 
-        public CompileDlg(Thread worker, int steps)
+        public CompileDlg(Thread worker, int steps) : this(worker, steps, true)
+        { }
+
+        public CompileDlg(Thread worker, int steps, bool showFinish)
         {
+           _showFinish = showFinish;
             _event = new ManualResetEvent(false);
             _worker = worker;
             InitializeComponent();
@@ -42,6 +47,11 @@ namespace WarSetup
 
         public void OnFinish()
         {
+            if (_showFinish == false)
+            {
+                this.Close();
+            }
+
             CancelBtn.Text = "Close";
             CancelBtn.Enabled = true;
             System.Media.SystemSounds.Asterisk.Play();

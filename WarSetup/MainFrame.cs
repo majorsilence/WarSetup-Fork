@@ -94,6 +94,93 @@ namespace WarSetup
                 {
                     LoadFile(_openFileName);
                 }
+
+                ProcessCommandLineArgs();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void ProcessCommandLineArgs()
+        {
+            bool compile = false;
+            string newVersion = "";
+            bool exit = false;
+            bool autoIncrement = false;
+            string inFile = "";
+
+            try
+            {
+                for (int i = 0; i < System.Environment.GetCommandLineArgs().Length; i++)
+                {
+
+                    string arg = System.Environment.GetCommandLineArgs()[i];
+                    
+                    // The file to open
+                    if (arg == "-i")
+                    {
+                        inFile = System.Environment.GetCommandLineArgs()[i + 1];
+                    }
+                    
+                    // Compile msi automatically
+                    if (arg == "-c")
+                    {
+                        compile = true;
+                    }
+
+                    // manually specify new version number and save
+                    if (arg == "-v")
+                    {
+                        newVersion = System.Environment.GetCommandLineArgs()[i + 1];
+                    }
+
+                    // auto increment version number before build and save
+                    if (arg == "-a")
+                    {
+                        autoIncrement = true;
+                    }
+
+                    // exit
+                    if (arg == "-e")
+                    {
+                        exit = true;
+                    }
+                }
+
+                if (inFile == "")
+                {
+                    System.Console.WriteLine("No input file supplied.");
+                    return;
+                }
+                else
+                {
+                    LoadFile(inFile);
+                }
+
+                if (autoIncrement)
+                {
+                    string[] version = projectVersion.Text.Split('.');
+                   
+                    projectVersion.Text = version[0] + "." + version[1] + "." + (int.Parse(version[2]) + 1);
+                    currentProject.projectVersion = projectVersion.Text;
+                    OnSave(false);
+                }
+                if (newVersion != "")
+                {
+                    projectVersion.Text = newVersion;
+                    currentProject.projectVersion = projectVersion.Text;
+                    OnSave(false);
+                }
+                if (compile)
+                {
+                    CurrentProject.BuldTarget(!exit);
+                }
+                if (exit)
+                {
+                    Application.Exit();
+                }
             }
             catch (Exception ex)
             {

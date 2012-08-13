@@ -2546,10 +2546,16 @@ namespace WarSetup
 
         public void BuldTarget()
         {
+            BuldTarget(true);
+        }
+
+
+        public void BuldTarget(bool showFinish)
+        {
             if (Properties.Settings.Default.compileInOwnThread)
             {
                 Thread worker = new Thread(this.DoBuildTarget);
-                _compileDlg = new CompileDlg(worker, (int)ProgressE.FINISH);
+                _compileDlg = new CompileDlg(worker, (int)ProgressE.FINISH, showFinish);
 
                 if (Properties.Settings.Default.compileOnLowerPriority)
                     worker.Priority = ThreadPriority.BelowNormal;
@@ -2559,7 +2565,7 @@ namespace WarSetup
             else
             {
                 
-                _compileDlg = new CompileDlg(null, (int)ProgressE.FINISH);
+                _compileDlg = new CompileDlg(null, (int)ProgressE.FINISH, showFinish);
                 _compileDlg.TopLevel = true;
                 _compileDlg.Show();
                 if (Properties.Settings.Default.compileOnLowerPriority)
