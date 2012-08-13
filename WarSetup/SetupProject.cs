@@ -105,6 +105,7 @@ namespace WarSetup
         private string _projectVersion;
         private string _projectOrganization;
         private string _projectFromWindowsVersion;
+        private string _projectRequireDotNetVersion;
         private bool _projectMustBeAdministratorToInstall;
         private bool _project64BitTarget;
         private string _projectTargetDirectory; // msi files are buiilt here
@@ -320,6 +321,13 @@ namespace WarSetup
             set { _projectMustBeAdministratorToInstall = value; }
         }
 
+        private void AddPropertyRef(string name)
+        {
+            XmlElement propRef = doc.CreateElement("PropertyRef");
+            propRef.SetAttribute("Id", name);
+            product.AppendChild(propRef);
+        }
+
         [XmlAttribute("project64BitTarget")]
         public bool project64BitTarget
         {
@@ -332,6 +340,13 @@ namespace WarSetup
         {
             get { return _projectTargetDirectory; }
             set { _projectTargetDirectory = value; }
+        }
+
+        [XmlAttribute("projectRequireDotNetVersion")]
+        public string projectRequireDotNetVersion
+        {
+            get { return _projectRequireDotNetVersion; }
+            set { _projectRequireDotNetVersion = value; }
         }
 
         [XmlAttribute("projectTargetName")]
@@ -2247,6 +2262,22 @@ namespace WarSetup
                         break;
                 }
 
+                switch (projectRequireDotNetVersion)
+                {
+                    case ".NET 2.0":
+                        AddPropertyRef("NETFRAMEWORK20");
+                        AddCondition("This product requires the .NET Framework 2.0 to be installed", "Installed OR NETFRAMEWORK20");
+                        break;
+                    case ".NET 3.0":
+                        AddPropertyRef("NETFRAMEWORK30");
+                        AddCondition("This product requires the .NET Framework 3.0 to be installed", "Installed OR NETFRAMEWORK30");
+                        break;
+                    case ".NET 3.5":
+                        AddPropertyRef("NETFRAMEWORK35");
+                        AddCondition("This product requires the .NET Framework 3.5 to be installed", "Installed OR NETFRAMEWORK35");
+                        break;
+                }
+
                 if (!isMergeModle
                     && (projectMergeModules.Count > 0))
                 {
@@ -2392,6 +2423,11 @@ namespace WarSetup
                         args.Add("-ext");
                         args.Add(Shell.GetWixBinary("WixUtilExtension.dll"));
                     }
+                    if (projectRequireDotNetVersion != null && projectRequireDotNetVersion != string.Empty)
+                    {
+                        args.Add("-ext");
+                        args.Add(Shell.GetWixBinary("WixNetFxExtension.dll"));
+                    }
                     args.Add("-out");
                     args.Add(TargetPathNoExt + ".wixobj");
                     if (!Shell.Execute(cmd, args))
@@ -2437,6 +2473,12 @@ namespace WarSetup
                             args.Add("-ext");
                             args.Add(Shell.GetWixBinary("WixUtilExtension.dll"));
 
+                        }
+
+                        if (projectRequireDotNetVersion != null && projectRequireDotNetVersion != string.Empty)
+                        {
+                            args.Add("-ext");
+                            args.Add(Shell.GetWixBinary("WixNetFxExtension.dll"));
                         }
 
                         {

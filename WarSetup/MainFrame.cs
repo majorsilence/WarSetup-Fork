@@ -123,7 +123,10 @@ namespace WarSetup
 
                 projectFromWindowsVersion.DataBindings.Clear();
                 projectFromWindowsVersion.DataBindings.Add("Text", currentProject, "projectFromWindowsVersion");
-                                
+
+                projectRequireDotNetVersion.DataBindings.Clear();
+                projectRequireDotNetVersion.DataBindings.Add("Text", currentProject, "projectRequireDotNetVersion");
+
                 projectMustBeAdministratorToInstall.DataBindings.Clear();
                 projectMustBeAdministratorToInstall.DataBindings.Add("Checked", currentProject,
                     "projectMustBeAdministratorToInstall");

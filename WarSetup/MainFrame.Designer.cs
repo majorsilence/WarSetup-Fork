@@ -76,6 +76,8 @@ namespace WarSetup
             this.targetDirButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.projectRequireDotNetVersion = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.projectLicense = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -537,7 +539,7 @@ namespace WarSetup
             this.tabProject.Location = new System.Drawing.Point(4, 22);
             this.tabProject.Name = "tabProject";
             this.tabProject.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProject.Size = new System.Drawing.Size(874, 463);
+            this.tabProject.Size = new System.Drawing.Size(874, 489);
             this.tabProject.TabIndex = 0;
             this.tabProject.Text = "Project";
             this.tabProject.UseVisualStyleBackColor = true;
@@ -549,7 +551,7 @@ namespace WarSetup
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.projectProperties.Location = new System.Drawing.Point(522, 6);
             this.projectProperties.Name = "projectProperties";
-            this.projectProperties.Size = new System.Drawing.Size(344, 445);
+            this.projectProperties.Size = new System.Drawing.Size(344, 471);
             this.projectProperties.TabIndex = 0;
             // 
             // groupBox2
@@ -559,7 +561,7 @@ namespace WarSetup
             this.groupBox2.Controls.Add(this.projectTargetDirectory);
             this.groupBox2.Controls.Add(this.targetDirButton);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(8, 378);
+            this.groupBox2.Location = new System.Drawing.Point(8, 406);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(505, 73);
             this.groupBox2.TabIndex = 11;
@@ -620,6 +622,8 @@ namespace WarSetup
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.projectRequireDotNetVersion);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.projectLicense);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label3);
@@ -636,15 +640,40 @@ namespace WarSetup
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(505, 219);
+            this.groupBox1.Size = new System.Drawing.Size(505, 247);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project Settings";
             // 
+            // projectRequireDotNetVersion
+            // 
+            this.projectRequireDotNetVersion.BackColor = System.Drawing.SystemColors.Window;
+            this.projectRequireDotNetVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.projectRequireDotNetVersion.FormattingEnabled = true;
+            this.projectRequireDotNetVersion.Items.AddRange(new object[] {
+            "",
+            ".NET 2.0",
+            ".NET 3.0",
+            ".NET 3.5"});
+            this.projectRequireDotNetVersion.Location = new System.Drawing.Point(135, 131);
+            this.projectRequireDotNetVersion.Name = "projectRequireDotNetVersion";
+            this.projectRequireDotNetVersion.Size = new System.Drawing.Size(355, 21);
+            this.projectRequireDotNetVersion.TabIndex = 20;
+            this.projectRequireDotNetVersion.TextChanged += new System.EventHandler(this.OnChange);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 139);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Required .NET Version";
+            // 
             // projectLicense
             // 
             this.projectLicense.FormattingEnabled = true;
-            this.projectLicense.Location = new System.Drawing.Point(134, 187);
+            this.projectLicense.Location = new System.Drawing.Point(134, 213);
             this.projectLicense.Name = "projectLicense";
             this.projectLicense.Size = new System.Drawing.Size(355, 21);
             this.projectLicense.Sorted = true;
@@ -655,7 +684,7 @@ namespace WarSetup
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(84, 190);
+            this.label7.Location = new System.Drawing.Point(84, 216);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 19;
@@ -664,7 +693,7 @@ namespace WarSetup
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 163);
+            this.label3.Location = new System.Drawing.Point(80, 189);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 12;
@@ -678,7 +707,7 @@ namespace WarSetup
             "Install for the current user",
             "Install for all users",
             "Auto"});
-            this.projectDefaultInstallMode.Location = new System.Drawing.Point(134, 155);
+            this.projectDefaultInstallMode.Location = new System.Drawing.Point(135, 181);
             this.projectDefaultInstallMode.Name = "projectDefaultInstallMode";
             this.projectDefaultInstallMode.Size = new System.Drawing.Size(355, 21);
             this.projectDefaultInstallMode.TabIndex = 5;
@@ -721,7 +750,7 @@ namespace WarSetup
             // projectMustBeAdministratorToInstall
             // 
             this.projectMustBeAdministratorToInstall.AutoSize = true;
-            this.projectMustBeAdministratorToInstall.Location = new System.Drawing.Point(134, 132);
+            this.projectMustBeAdministratorToInstall.Location = new System.Drawing.Point(135, 158);
             this.projectMustBeAdministratorToInstall.Name = "projectMustBeAdministratorToInstall";
             this.projectMustBeAdministratorToInstall.Size = new System.Drawing.Size(168, 17);
             this.projectMustBeAdministratorToInstall.TabIndex = 4;
@@ -792,7 +821,7 @@ namespace WarSetup
             this.sss.Controls.Add(this.label6);
             this.sss.Controls.Add(this.project64BitTarget);
             this.sss.Controls.Add(this.projectType);
-            this.sss.Location = new System.Drawing.Point(8, 231);
+            this.sss.Location = new System.Drawing.Point(8, 259);
             this.sss.Name = "sss";
             this.sss.Size = new System.Drawing.Size(505, 141);
             this.sss.TabIndex = 9;
@@ -867,7 +896,7 @@ namespace WarSetup
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(882, 489);
+            this.tabControl1.Size = new System.Drawing.Size(882, 515);
             this.tabControl1.TabIndex = 2;
             // 
             // tabFeatures
@@ -876,7 +905,7 @@ namespace WarSetup
             this.tabFeatures.Location = new System.Drawing.Point(4, 22);
             this.tabFeatures.Name = "tabFeatures";
             this.tabFeatures.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFeatures.Size = new System.Drawing.Size(874, 463);
+            this.tabFeatures.Size = new System.Drawing.Size(874, 489);
             this.tabFeatures.TabIndex = 1;
             this.tabFeatures.Text = "Features";
             this.tabFeatures.UseVisualStyleBackColor = true;
@@ -1361,7 +1390,7 @@ namespace WarSetup
             this.tabIncludes.Controls.Add(this.groupBox3);
             this.tabIncludes.Location = new System.Drawing.Point(4, 22);
             this.tabIncludes.Name = "tabIncludes";
-            this.tabIncludes.Size = new System.Drawing.Size(874, 463);
+            this.tabIncludes.Size = new System.Drawing.Size(874, 489);
             this.tabIncludes.TabIndex = 2;
             this.tabIncludes.Text = "Includes";
             this.tabIncludes.UseVisualStyleBackColor = true;
@@ -1572,7 +1601,7 @@ namespace WarSetup
             this.tabOutput.Controls.Add(this.compilerOutput);
             this.tabOutput.Location = new System.Drawing.Point(4, 22);
             this.tabOutput.Name = "tabOutput";
-            this.tabOutput.Size = new System.Drawing.Size(874, 463);
+            this.tabOutput.Size = new System.Drawing.Size(874, 489);
             this.tabOutput.TabIndex = 3;
             this.tabOutput.Text = "Output";
             this.tabOutput.UseVisualStyleBackColor = true;
@@ -1594,7 +1623,7 @@ namespace WarSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 538);
+            this.ClientSize = new System.Drawing.Size(882, 564);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -1790,6 +1819,9 @@ namespace WarSetup
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem runTargetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openTargetDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ComboBox projectRequireDotNetVersion;
+        private System.Windows.Forms.Label label8;
+    
     }
 }
 
