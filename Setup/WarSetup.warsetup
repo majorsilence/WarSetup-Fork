@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="true" mainTargetApp="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" nextUniqueId="2427" projectName="War Setup" projectUuid="91025336-8fed-40ff-9f5d-931cd458e08c" projectUpgradeUuid="93d3ad65-ddca-442c-82e8-de5c1f5f9e4a" projectVersion="3.13.00" projectOrganization="Jgaa's Internet" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="f:\devel\current\war\WarSetup\Setup\bin" projectTargetName="WarSetup-3.13" projectType="0" projectUserInterface="WixUI_Mondo">
+  <LicencePaths>
+    <string>C:\Program Files\Jgaa's Internet\War Setup\Licenses</string>
+  </LicencePaths>
+  <Virgin>false</Virgin>
+  <projectFeatures featureId="IDAA85A4A90373EB055A472FC7512852FC" featureName="War Setup" featureDescription="The complete package" configurableDirectory="APPLICATIONFOLDER" configurableDirectoryDefaultPath="[ProjectName]" enableInDefaultInstall="true" enableInMinimalInstall="true" excludeFromBuild="false">
+    <childFeatures featureId="PROGRAM" featureName="Program" featureDescription="The WarSetup application" enableInDefaultInstall="true" enableInMinimalInstall="true" excludeFromBuild="false">
+      <components componentId="ID0806560FB757F6196641B3C66B7DC6CB" componentGuid="46ef5b4b-5bdc-4499-abc5-ee38ef0a9a29">
+        <componentFiles fileId="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" srcName="WarSetup.exe" srcDirectory="..\WarSetup\bin\Release" dstName="WarSetup.exe" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="War Setup 3" shortcutInProgramFilesMenu="true" shortcutOnDesktop="true" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="War Setup 3 Project Manager">
+          <fileExtensions Id="ID3FC65E18ED4FD7A3AADB6C57150EB472" Extension="warsetup" MimeType="Application/WarSetup" Description="War Setup 3 Project File" IconIndex="0" />
+          <service StartWhenInstalled="true" Remove="both" id="ID8DB0290C5F2F2034357CA4BC9B2A4C26" isService="false" userAccount="System" userPassword="" cmdLineArguments="" description="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+        </componentFiles>
+        <addToCreateFolder>false</addToCreateFolder>
+      </components>
+      <components componentId="ID459338EC11D0E4774B1B7BE239B0584B" componentGuid="d86241be-3855-476a-b8ed-04fe1e0156ed">
+        <componentFiles fileId="ID_a21552d0_9d9a_42ed_9a14_5fee05c9942a" srcName="WarSetup.exe.config" srcDirectory="..\WarSetup\bin\Release" dstName="WarSetup.exe.config" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="WarSetup.exe" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="IDC836916821B6D0BCD68026453D2C8821" isService="false" userAccount="System" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+        </componentFiles>
+        <addToCreateFolder>false</addToCreateFolder>
+      </components>
+      <components componentId="ID4612C7484FAE7E74529085884786FD8E" componentGuid="3e47df3c-25af-4e0f-8091-f8b0ded56bfe">
+        <componentFiles fileId="WARSETUP_ICON" srcName="WarSetup.ico" srcDirectory="..\WarSetup\icons" dstName="WarSetup.ico" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="WarSetup" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="ID833B5CC7606347A235A36DBC20AD9163" isService="false" userAccount="System" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+        </componentFiles>
+        <addToCreateFolder>false</addToCreateFolder>
+      </components>
+      <components componentId="ID1289" componentGuid="71d50f63-9f97-4c1d-bc73-b95c952411fa">
+        <componentFiles fileId="ID_afe2f22f_39af_41f6_96ba_1aa152640e9c" srcName="pad_file.xml" srcDirectory=".." dstName="pad_file.xml" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="pad_file" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="ID1288" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+        </componentFiles>
+        <addToCreateFolder>false</addToCreateFolder>
+      </components>
+      <defaultInstallMode>3</defaultInstallMode>
+      <directories dirId="ID7B3576C7C55EB634DBEAC1672C472D8C" srcPath="..\WarSetup\customactions" dstPath="CustomActions" patterns="WarSetupPlugin.dll" excludePatterns="" recurse="false" preventEmptyDirectories="false" addToPath="false" ideHeaderFiles="false" ideExecutables="false" ideLibrary="false" ideMicrosoftVisualStudio2003="false" ideMicrosoftVisualStudio2005="false">
+        <pathComponent componentId="ID7A2A18ED447844D5D790A5F1C00B90B9" componentGuid="fec0d019-4588-4469-8989-ea67b64eb9a5">
+          <addToCreateFolder>false</addToCreateFolder>
+        </pathComponent>
+      </directories>
+      <directories dirId="ID77F5C1A31454B63A38DC07E4DEE40FDB" srcPath="..\WarSetup\Licenses" dstPath="Licenses" patterns=".*\.rtf" excludePatterns="" recurse="false" preventEmptyDirectories="false" addToPath="false" ideHeaderFiles="false" ideExecutables="false" ideLibrary="false" ideMicrosoftVisualStudio2003="false" ideMicrosoftVisualStudio2005="false">
+        <pathComponent componentId="ID6054E0B7E19999E0CA8332BE218CD26A" componentGuid="bc42fe80-b3f2-480e-aeb9-0677f8712881">
+          <addToCreateFolder>false</addToCreateFolder>
+        </pathComponent>
+      </directories>
+    </childFeatures>
+    <childFeatures featureId="DOCUMENTATION" featureName="Documentation" featureDescription="The documentation" enableInDefaultInstall="true" enableInMinimalInstall="true" excludeFromBuild="false">
+      <components componentId="ID68A8F7634F6CC5F9D73F4B01B9D28250" componentGuid="9927da51-35c4-4a48-a8da-f1474cede83c">
+        <componentFiles fileId="ID_59756ff1_62e7_4a14_b169_d82ec25c0d29" srcName="WarSetup_3_Users_Guide.pdf" srcDirectory="..\Documentation" dstName="WarSetup_3_Users_Guide.pdf" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="Users Guide" shortcutInProgramFilesMenu="true" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="ID71200415C656E7CA880CF7E4D0ACFDC6" isService="false" userAccount="System" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+        </componentFiles>
+        <addToCreateFolder>false</addToCreateFolder>
+      </components>
+      <defaultInstallMode>3</defaultInstallMode>
+    </childFeatures>
+    <childFeatures featureId="WARSETUP_SRC" featureName="Source Code" featureDescription="Enter Description Here" configurableDirectory="SOURCECODE" configurableDirectoryDefaultPath="SourceCode" enableInDefaultInstall="false" enableInMinimalInstall="false" excludeFromBuild="false">
+      <defaultInstallMode>3</defaultInstallMode>
+      <directories dirId="ID21CDAA41EC54FF7800EE3E13164B97FE" srcPath="..\" dstPath="[SOURCECODE]" patterns="(.*\.sln$)|(.*\.odt$)|(.*\.odg$)|(.*\.xfc$)|(.*\.bmp$)|(.*\.png$)|(.*\.[Ii][Cc][Oo]$)|(.*\.warsetup$)|(.*\.csproj$)|(.*\.cs$)|(.*\.resx$)|(.*\.config$)|(.*\.rtf$)|(.*\.vcproj$)|(.*\.cpp$)|(.*\.h$)|(.*\.def$)|(.*\.cpp$)|(.*\.txt$)" excludePatterns="(.*\\bin\\.*)|(.*\\obj\\.*)|(.*Debug.')|(.*Release.*)|(.*\.suo$)|(.*test.*)" recurse="true" preventEmptyDirectories="true" addToPath="false" ideHeaderFiles="false" ideExecutables="false" ideLibrary="false" ideMicrosoftVisualStudio2003="false" ideMicrosoftVisualStudio2005="false">
+        <pathComponent componentId="ID35E4CFE546B602EF3803C353CDFC4321" componentGuid="e2c53645-6fb0-4a6e-999a-00f0303803da">
+          <addToCreateFolder>false</addToCreateFolder>
+        </pathComponent>
+      </directories>
+    </childFeatures>
+    <defaultInstallMode>3</defaultInstallMode>
+  </projectFeatures>
+  <projectInstallForCurrentOrAllUsers>0</projectInstallForCurrentOrAllUsers>
+  <License>
+    <System>true</System>
+    <Name>Common Public License Version 1.0</Name>
+  </License>
+  <projectProperties LicencePath="" TopBanner="..\Pictures\WarSetupTopBanner.bmp" BigBanner="..\Pictures\WarSetupBg.bmp" ExclamationIcon="" InfoIcon="" NewIcon="" UpIcon="" VS2003Integration="VS2003_INTEGRATION" VS2005Integration="VS2005_INTEGRATION" UseRelativePaths="true" LaunchAppText="" UseWixUI_ErrorProgressText="true" UseWixUI="true" CreateUninstallShortcut="true" Codepage="1252" ProductLanguage="1033" AlwaysMajorUpgrade="true" SupressValidation="false" Compress="true" BuildTarget="true" PublisherUrl="http://products.jgaa.com" SupportContact="Jarle Aase &lt;jgaa@jgaa.com&gt;" SupportUrl="http://warsetup.jgaa.com" SupportPhone="" ReadMeFile="" UpdateUrl="http://warsetup.jgaa.com" Comments="The free installer for Windows" Icon="[APPLICATIONFOLDER]\WarSetup.ico" EmbedCab="true" MaxCabSize="0" CabCompressionLevel="high" InstallerVersion="300">
+    <UiCultures Name="en-US" Enabled="true" />
+    <UiCultures Name="de-de" Enabled="false" />
+    <UiCultures Name="es-es" Enabled="false" />
+    <UiCultures Name="nl-nl" Enabled="false" />
+  </projectProperties>
+</WarSetup-Project>

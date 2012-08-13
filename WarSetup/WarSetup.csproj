@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA28ACEE-4BEA-4400-815C-6AA7F66072E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WarSetup</RootNamespace>
+    <AssemblyName>WarSetup</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>Resources\WarSetupIcon.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutDlg.Designer.cs">
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompileDlg.Designer.cs">
+      <DependentUpon>CompileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultDirectoryConverter.cs" />
+    <Compile Include="FileExtension.cs" />
+    <Compile Include="ProjectProperties.cs" />
+    <Compile Include="PropertiesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesDlg.Designer.cs">
+      <DependentUpon>PropertiesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrame.Designer.cs">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MergeModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PropertiesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServiceDependenc.cs" />
+    <Compile Include="ServiceInstall.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SetupComponent.cs" />
+    <Compile Include="SetupDirectory.cs" />
+    <Compile Include="SetupFeature.cs" />
+    <Compile Include="SetupFile.cs" />
+    <Compile Include="SetupProject.cs" />
+    <Compile Include="SetupShortcut.cs" />
+    <Compile Include="Shell.cs" />
+    <Compile Include="WixModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CLSDFOLD.ICO" />
+    <EmbeddedResource Include="Resources\OPENFOLD.ICO" />
+    <EmbeddedResource Include="Resources\WarSetupIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CompileDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CompileDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\WarSetup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Todo.txt">
+      <Link>Todo.txt</Link>
+    </Content>
+    <Content Include="icons\File.ico" />
+    <Content Include="icons\MainFeature.ico" />
+    <None Include="Resources\openfolderHS.png" />
+    <None Include="Resources\NavForward.png" />
+    <None Include="Resources\CascadeWindowsHS.png" />
+    <None Include="Resources\saveHS.png" />
+    <Content Include="WarSetupIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

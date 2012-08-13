@@ -1,0 +1,29 @@
+
+Bugs:
+
+Features:
+	
+	v Gnu GPL 3
+	v File dialogs as alternative to drop-targets
+	- Option to start target automatically when the user signs in
+	- Progress-dialog
+	- Compile in separate thread
+	- Tools/Reload all merge-modules
+	- New menu - macros. Pop-up dialog with common installer macros and description. Copy to clipboard
+	- Scrolldown for macros in places like Working Dir
+	- Update pad-file
+	- Custom license files
+	- Add support for installation of system-libraries to the system-repository (manifest stuff).
+	
+	- Wixards:
+		- Simple program
+		- Simple library
+		- Merge-module
+		- Open source program
+		- Open source library
+		- Open source documentation project
+	
+
+Test:
+	- Test Drag & Drop with Vista
+
