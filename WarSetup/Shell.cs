@@ -98,7 +98,19 @@ namespace WarSetup
                         rval = System.Environment.GetEnvironmentVariable("ProgramFiles");
                     if ((rval == null) || (rval == ""))
                         rval = @"C:\Program Files";
-                    rval = Path.Combine(rval, "Windows Installer XML v3");
+
+                    if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "Windows Installer XML v3.5")))
+                    {
+                        // Attempt to use version 3.5
+                        rval = System.IO.Path.Combine(rval, "Windows Installer XML v3.5");
+                    }
+                    else
+                    {
+                        // Fall back to version 3
+                        rval = Path.Combine(rval, "Windows Installer XML v3");
+                    }
+
+                   
                     rval = Path.Combine(rval, "bin");
                 }
 
