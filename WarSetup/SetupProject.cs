@@ -2233,32 +2233,51 @@ namespace WarSetup
                 if (project64BitTarget)
                     AddCondition("This product can only run on native 64 bit hardware", "VersionNT64");
 
+                // See http://msdn.microsoft.com/en-us/library/windows/desktop/aa370556(v=vs.85).aspx for a 
+                // complete list of windows versions
                 switch (projectFromWindowsVersion)
                 {
                     case "Windows 2000":
                         AddCondition("This product require Windows 2000 or newer", "VersionNT >= 400");
                         break;
-
                     case "Windows XP":
                         AddCondition("This product require Windows XP or newer", "VersionNT >= 501");
                         break;
-
                     case "Windows XP SP 2":
-                        AddCondition("This product require Windows XP or newer",
+                        AddCondition("This product require Windows XP SP 2 or newer",
                             "(VersionNT = 501 AND ServicePackLevel >= 2) OR VersionNT > 501");
                         break;
-
+                    case "Windows XP SP 3":
+                        AddCondition("This product require Windows XP SP 3 or newer",
+                            "(VersionNT = 501 AND ServicePackLevel >= 3) OR VersionNT > 501");
+                        break;
                     case "Windows 2003":
                         AddCondition("This product require Windows 2003 or newer", "VersionNT >= 502");
                         break;
-
                     case "Windows 2003 SP 1":
                         AddCondition("This product require Windows XP or newer",
                             "(VersionNT = 502 AND ServicePackLevel >= 1) OR VersionNT > 502");
                         break;
-
                     case "Windows Vista":
                         AddCondition("This product require Windows Vista or newer", "VersionNT >= 600");
+                        break;
+                    case "Windows Vista SP 1":
+                        AddCondition("This product require Windows Vista SP 1 or newer",
+                            "(VersionNT >= 600 AND ServicePackLevel >= 1) OR VersionNT > 600");
+                        break;
+                    case "Windows Vista SP 2":
+                        AddCondition("This product require Windows Vista SP 2 or newer",
+                            "(VersionNT >= 600 AND ServicePackLevel >= 2) OR VersionNT > 600");
+                        break;
+                    case "Windows 7":
+                        AddCondition("This product require Windows 7 or newer", "VersionNT >= 601");
+                        break;
+                    case "Windows 7 SP 1":
+                        AddCondition("This product require Windows 7 SP 1 or newer",
+                            "(VersionNT = 601 AND ServicePackLevel >= 1) OR VersionNT > 601");
+                        break;
+                    case "Windows 8":
+                        AddCondition("This product require Windows 8 or newer", "VersionNT >= 602");
                         break;
                 }
 

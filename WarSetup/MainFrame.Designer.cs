@@ -780,9 +780,15 @@ namespace WarSetup
             "Windows 2000",
             "Windows XP",
             "Windows XP SP 2",
+            "Windows XP SP 3",
             "Windows 2003",
             "Windows 2003 SP 1",
-            "Windows Vista"});
+            "Windows Vista",
+            "Windows Vista SP 1",
+            "Windows Vista SP 2",
+            "Windows 7",
+            "Windows 7 SP 1",
+            "Windows 8"});
             this.projectFromWindowsVersion.Location = new System.Drawing.Point(134, 104);
             this.projectFromWindowsVersion.Name = "projectFromWindowsVersion";
             this.projectFromWindowsVersion.Size = new System.Drawing.Size(355, 21);
