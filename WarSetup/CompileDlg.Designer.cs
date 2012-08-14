@@ -64,7 +64,6 @@ namespace WarSetup
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 149);
-            this.ControlBox = false;
             this.Controls.Add(this.Info);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.CancelBtn);
@@ -74,6 +73,7 @@ namespace WarSetup
             this.Name = "CompileDlg";
             this.ShowInTaskbar = false;
             this.Text = "Compiling. Please wait...";
+            this.Load += new System.EventHandler(this.CompileDlg_Load);
             this.Shown += new System.EventHandler(this.CompileDlg_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
