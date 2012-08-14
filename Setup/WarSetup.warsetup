@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="true" mainTargetApp="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" nextUniqueId="2427" projectName="War Setup" projectUuid="91025336-8fed-40ff-9f5d-931cd458e08c" projectUpgradeUuid="93d3ad65-ddca-442c-82e8-de5c1f5f9e4a" projectVersion="3.13.00" projectOrganization="Jgaa's Internet" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="f:\devel\current\war\WarSetup\Setup\bin" projectTargetName="WarSetup-3.13" projectType="0" projectUserInterface="WixUI_Mondo">
+<WarSetup-Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" projectRunAfterInstall="true" mainTargetApp="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" nextUniqueId="2427" projectName="War Setup Fork" projectUuid="91025336-8fed-40ff-9f5d-931cd458e08c" projectUpgradeUuid="93d3ad65-ddca-442c-82e8-de5c1f5f9e4a" projectVersion="3.13.1" projectOrganization="MajorSilence" projectFromWindowsVersion="Windows XP SP 3" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Users\Peter\Desktop" projectRequireDotNetVersion=".NET 4.0 FULL" projectTargetName="WarSetup-3.13.1" projectType="0" projectUserInterface="WixUI_Mondo">
   <LicencePaths>
-    <string>C:\Program Files\Jgaa's Internet\War Setup\Licenses</string>
+    <string>C:\Users\Peter\Projects\WarSetup-Fork\WarSetup\bin\Debug\Licenses</string>
   </LicencePaths>
   <Virgin>false</Virgin>
   <projectFeatures featureId="IDAA85A4A90373EB055A472FC7512852FC" featureName="War Setup" featureDescription="The complete package" configurableDirectory="APPLICATIONFOLDER" configurableDirectoryDefaultPath="[ProjectName]" enableInDefaultInstall="true" enableInMinimalInstall="true" excludeFromBuild="false">
@@ -52,14 +52,6 @@
       </components>
       <defaultInstallMode>3</defaultInstallMode>
     </childFeatures>
-    <childFeatures featureId="WARSETUP_SRC" featureName="Source Code" featureDescription="Enter Description Here" configurableDirectory="SOURCECODE" configurableDirectoryDefaultPath="SourceCode" enableInDefaultInstall="false" enableInMinimalInstall="false" excludeFromBuild="false">
-      <defaultInstallMode>3</defaultInstallMode>
-      <directories dirId="ID21CDAA41EC54FF7800EE3E13164B97FE" srcPath="..\" dstPath="[SOURCECODE]" patterns="(.*\.sln$)|(.*\.odt$)|(.*\.odg$)|(.*\.xfc$)|(.*\.bmp$)|(.*\.png$)|(.*\.[Ii][Cc][Oo]$)|(.*\.warsetup$)|(.*\.csproj$)|(.*\.cs$)|(.*\.resx$)|(.*\.config$)|(.*\.rtf$)|(.*\.vcproj$)|(.*\.cpp$)|(.*\.h$)|(.*\.def$)|(.*\.cpp$)|(.*\.txt$)" excludePatterns="(.*\\bin\\.*)|(.*\\obj\\.*)|(.*Debug.')|(.*Release.*)|(.*\.suo$)|(.*test.*)" recurse="true" preventEmptyDirectories="true" addToPath="false" ideHeaderFiles="false" ideExecutables="false" ideLibrary="false" ideMicrosoftVisualStudio2003="false" ideMicrosoftVisualStudio2005="false">
-        <pathComponent componentId="ID35E4CFE546B602EF3803C353CDFC4321" componentGuid="e2c53645-6fb0-4a6e-999a-00f0303803da">
-          <addToCreateFolder>false</addToCreateFolder>
-        </pathComponent>
-      </directories>
-    </childFeatures>
     <defaultInstallMode>3</defaultInstallMode>
   </projectFeatures>
   <projectInstallForCurrentOrAllUsers>0</projectInstallForCurrentOrAllUsers>
@@ -67,7 +59,7 @@
     <System>true</System>
     <Name>Common Public License Version 1.0</Name>
   </License>
-  <projectProperties LicencePath="" TopBanner="..\Pictures\WarSetupTopBanner.bmp" BigBanner="..\Pictures\WarSetupBg.bmp" ExclamationIcon="" InfoIcon="" NewIcon="" UpIcon="" VS2003Integration="VS2003_INTEGRATION" VS2005Integration="VS2005_INTEGRATION" UseRelativePaths="true" LaunchAppText="" UseWixUI_ErrorProgressText="true" UseWixUI="true" CreateUninstallShortcut="true" Codepage="1252" ProductLanguage="1033" AlwaysMajorUpgrade="true" SupressValidation="false" Compress="true" BuildTarget="true" PublisherUrl="http://products.jgaa.com" SupportContact="Jarle Aase &lt;jgaa@jgaa.com&gt;" SupportUrl="http://warsetup.jgaa.com" SupportPhone="" ReadMeFile="" UpdateUrl="http://warsetup.jgaa.com" Comments="The free installer for Windows" Icon="[APPLICATIONFOLDER]\WarSetup.ico" EmbedCab="true" MaxCabSize="0" CabCompressionLevel="high" InstallerVersion="300">
+  <projectProperties LicencePath="" TopBanner="..\Pictures\WarSetupTopBanner.bmp" BigBanner="..\Pictures\WarSetupBg.bmp" ExclamationIcon="" InfoIcon="" NewIcon="" UpIcon="" VS2003Integration="VS2003_INTEGRATION" VS2005Integration="VS2005_INTEGRATION" UseRelativePaths="true" LaunchAppText="" UseWixUI_ErrorProgressText="true" UseWixUI="true" CreateUninstallShortcut="true" Codepage="1252" ProductLanguage="1033" AlwaysMajorUpgrade="true" SupressValidation="false" Compress="true" BuildTarget="true" PublisherUrl="https://github.com/majorsilence/WarSetup-Fork" SupportContact="Peter Gill &lt;peter@majorsilence.com&gt;" SupportUrl="https://github.com/majorsilence/WarSetup-Fork" SupportPhone="" ReadMeFile="" UpdateUrl="https://github.com/majorsilence/WarSetup-Fork" Comments="The free installer for Windows" Icon="[APPLICATIONFOLDER]\WarSetup.ico" EmbedCab="true" MaxCabSize="0" CabCompressionLevel="high" InstallerVersion="300">
     <UiCultures Name="en-US" Enabled="true" />
     <UiCultures Name="de-de" Enabled="false" />
     <UiCultures Name="es-es" Enabled="false" />
