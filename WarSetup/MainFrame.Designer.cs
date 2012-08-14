@@ -122,10 +122,10 @@ namespace WarSetup
             this.tabFiles = new System.Windows.Forms.TabPage();
             this.currentFileProperties = new System.Windows.Forms.PropertyGrid();
             this.fileList = new System.Windows.Forms.ListView();
-            this.columnName = new System.Windows.Forms.ColumnHeader();
-            this.columnDir = new System.Windows.Forms.ColumnHeader();
-            this.columnOriginalName = new System.Windows.Forms.ColumnHeader();
-            this.columnOriginalDir = new System.Windows.Forms.ColumnHeader();
+            this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDir = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnOriginalName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnOriginalDir = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuFileList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addFilesMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,8 +134,8 @@ namespace WarSetup
             this.tabDirectories = new System.Windows.Forms.TabPage();
             this.directoryProperties = new System.Windows.Forms.PropertyGrid();
             this.featureDirectoryList = new System.Windows.Forms.ListView();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuDirectories = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addDirectoryMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuDeleteDirectory = new System.Windows.Forms.ToolStripMenuItem();
@@ -143,9 +143,9 @@ namespace WarSetup
             this.tabShortcuts = new System.Windows.Forms.TabPage();
             this.shortcutProperties = new System.Windows.Forms.PropertyGrid();
             this.shortcutList = new System.Windows.Forms.ListView();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuShortcuts = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuAddShortcut = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuDeleteShortcut = new System.Windows.Forms.ToolStripMenuItem();
@@ -153,10 +153,10 @@ namespace WarSetup
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.mergeModuleProperties = new System.Windows.Forms.PropertyGrid();
             this.mergeModulesList = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuMergeModules = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuDeleteMergeModule = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadPropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -166,8 +166,8 @@ namespace WarSetup
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.wixModuleProperties = new System.Windows.Forms.PropertyGrid();
             this.wixModulesList = new System.Windows.Forms.ListView();
-            this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuWixModules = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addWixModuleMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDeleteWixModule = new System.Windows.Forms.ToolStripMenuItem();
@@ -185,6 +185,7 @@ namespace WarSetup
             this.sss.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabFeatures.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -207,9 +208,9 @@ namespace WarSetup
             // 
             // featuresTree
             // 
-            this.featuresTree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.featuresTree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.featuresTree.ContextMenuStrip = this.contextMenuFeatures;
             this.featuresTree.FullRowSelect = true;
             this.featuresTree.HideSelection = false;
@@ -226,26 +227,26 @@ namespace WarSetup
             this.menuAddChildFeature,
             this.menuDeleteFeature});
             this.contextMenuFeatures.Name = "contextMenuFeatures";
-            this.contextMenuFeatures.Size = new System.Drawing.Size(172, 70);
+            this.contextMenuFeatures.Size = new System.Drawing.Size(170, 70);
             // 
             // menuAddFeature
             // 
             this.menuAddFeature.Name = "menuAddFeature";
-            this.menuAddFeature.Size = new System.Drawing.Size(171, 22);
+            this.menuAddFeature.Size = new System.Drawing.Size(169, 22);
             this.menuAddFeature.Text = "Add Root Feature";
             this.menuAddFeature.Click += new System.EventHandler(this.menuAddFeature_Click);
             // 
             // menuAddChildFeature
             // 
             this.menuAddChildFeature.Name = "menuAddChildFeature";
-            this.menuAddChildFeature.Size = new System.Drawing.Size(171, 22);
+            this.menuAddChildFeature.Size = new System.Drawing.Size(169, 22);
             this.menuAddChildFeature.Text = "Add Child Feature";
             this.menuAddChildFeature.Click += new System.EventHandler(this.menuAddChildFeature_Click);
             // 
             // menuDeleteFeature
             // 
             this.menuDeleteFeature.Name = "menuDeleteFeature";
-            this.menuDeleteFeature.Size = new System.Drawing.Size(171, 22);
+            this.menuDeleteFeature.Size = new System.Drawing.Size(169, 22);
             this.menuDeleteFeature.Text = "Delete";
             this.menuDeleteFeature.Click += new System.EventHandler(this.menuDeleteFeature_Click);
             // 
@@ -351,7 +352,7 @@ namespace WarSetup
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newToolStripMenuItem
@@ -360,7 +361,7 @@ namespace WarSetup
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
@@ -369,7 +370,7 @@ namespace WarSetup
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -378,13 +379,13 @@ namespace WarSetup
             this.openRecentProjectToolStripMenuItem.Image = global::WarSetup.Properties.Resources.openfolderHS;
             this.openRecentProjectToolStripMenuItem.Name = "openRecentProjectToolStripMenuItem";
             this.openRecentProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.openRecentProjectToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.openRecentProjectToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.openRecentProjectToolStripMenuItem.Text = "Open &recent project";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(218, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(217, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -392,7 +393,7 @@ namespace WarSetup
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -400,25 +401,25 @@ namespace WarSetup
             // 
             this.saveAsToolStripMenuItem.Image = global::WarSetup.Properties.Resources.saveHS;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.saveAsToolStripMenuItem.Text = "Save &As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(218, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(217, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(218, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(217, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -431,18 +432,18 @@ namespace WarSetup
             this.runTargetToolStripMenuItem,
             this.openTargetDirectoryToolStripMenuItem});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.projectToolStripMenuItem.Text = "&Project";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(213, 6);
             // 
             // tagNewMajorVersionToolStripMenuItem
             // 
             this.tagNewMajorVersionToolStripMenuItem.Name = "tagNewMajorVersionToolStripMenuItem";
-            this.tagNewMajorVersionToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.tagNewMajorVersionToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.tagNewMajorVersionToolStripMenuItem.Text = "New major Upgrade";
             this.tagNewMajorVersionToolStripMenuItem.ToolTipText = "Change the procuct-ID to tag the next build as a Major Upgrade";
             this.tagNewMajorVersionToolStripMenuItem.Click += new System.EventHandler(this.tagNewMajorVersionToolStripMenuItem_Click);
@@ -452,7 +453,7 @@ namespace WarSetup
             this.buildTargetToolStripMenuItem.Image = global::WarSetup.Properties.Resources.NavForward;
             this.buildTargetToolStripMenuItem.Name = "buildTargetToolStripMenuItem";
             this.buildTargetToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.buildTargetToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.buildTargetToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.buildTargetToolStripMenuItem.Text = "&Build Target";
             this.buildTargetToolStripMenuItem.Click += new System.EventHandler(this.BuildTargetBtn_Click);
             // 
@@ -461,7 +462,7 @@ namespace WarSetup
             this.runTargetToolStripMenuItem.Image = global::WarSetup.Properties.Resources.CascadeWindowsHS;
             this.runTargetToolStripMenuItem.Name = "runTargetToolStripMenuItem";
             this.runTargetToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
-            this.runTargetToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.runTargetToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.runTargetToolStripMenuItem.Text = "&Run target";
             this.runTargetToolStripMenuItem.Click += new System.EventHandler(this.runTargetToolStripMenuItem_Click);
             // 
@@ -470,7 +471,7 @@ namespace WarSetup
             this.openTargetDirectoryToolStripMenuItem.Image = global::WarSetup.Properties.Resources.openfolderHS;
             this.openTargetDirectoryToolStripMenuItem.Name = "openTargetDirectoryToolStripMenuItem";
             this.openTargetDirectoryToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.openTargetDirectoryToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.openTargetDirectoryToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.openTargetDirectoryToolStripMenuItem.Text = "&Open Target Directory";
             this.openTargetDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openTargetDirectoryToolStripMenuItem_Click);
             // 
@@ -479,14 +480,14 @@ namespace WarSetup
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -498,19 +499,19 @@ namespace WarSetup
             this.usersManualToolStripMenuItem,
             this.openWarSetupsHomepageToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(254, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(253, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -518,7 +519,7 @@ namespace WarSetup
             // 
             this.usersManualToolStripMenuItem.Name = "usersManualToolStripMenuItem";
             this.usersManualToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.usersManualToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.usersManualToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.usersManualToolStripMenuItem.Text = "Users Manual ...";
             this.usersManualToolStripMenuItem.Click += new System.EventHandler(this.usersManualToolStripMenuItem_Click);
             // 
@@ -526,7 +527,7 @@ namespace WarSetup
             // 
             this.openWarSetupsHomepageToolStripMenuItem.Name = "openWarSetupsHomepageToolStripMenuItem";
             this.openWarSetupsHomepageToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.openWarSetupsHomepageToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.openWarSetupsHomepageToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.openWarSetupsHomepageToolStripMenuItem.Text = "Open War Setups &homepage ...";
             this.openWarSetupsHomepageToolStripMenuItem.Click += new System.EventHandler(this.openWarSetupsHomepageToolStripMenuItem_Click);
             // 
@@ -546,9 +547,9 @@ namespace WarSetup
             // 
             // projectProperties
             // 
-            this.projectProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.projectProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.projectProperties.Location = new System.Drawing.Point(522, 6);
             this.projectProperties.Name = "projectProperties";
             this.projectProperties.Size = new System.Drawing.Size(344, 471);
@@ -654,7 +655,9 @@ namespace WarSetup
             "",
             ".NET 2.0",
             ".NET 3.0",
-            ".NET 3.5"});
+            ".NET 3.5",
+            ".NET 4.0 FULL",
+            ".NET 4.0 CLIENT"});
             this.projectRequireDotNetVersion.Location = new System.Drawing.Point(135, 131);
             this.projectRequireDotNetVersion.Name = "projectRequireDotNetVersion";
             this.projectRequireDotNetVersion.Size = new System.Drawing.Size(355, 21);
@@ -678,8 +681,8 @@ namespace WarSetup
             this.projectLicense.Size = new System.Drawing.Size(355, 21);
             this.projectLicense.Sorted = true;
             this.projectLicense.TabIndex = 6;
-            this.projectLicense.SelectionChangeCommitted += new System.EventHandler(this.projectLicense_SelectionChangeCommitted);
             this.projectLicense.DropDown += new System.EventHandler(this.projectLicense_DropDown);
+            this.projectLicense.SelectionChangeCommitted += new System.EventHandler(this.projectLicense_SelectionChangeCommitted);
             // 
             // label7
             // 
@@ -929,9 +932,9 @@ namespace WarSetup
             // 
             // PropertiesTab
             // 
-            this.PropertiesTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.PropertiesTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PropertiesTab.Controls.Add(this.tabProperties);
             this.PropertiesTab.Controls.Add(this.tabFiles);
             this.PropertiesTab.Controls.Add(this.tabDirectories);
@@ -966,9 +969,9 @@ namespace WarSetup
             // 
             // featurePropertiesGrid
             // 
-            this.featurePropertiesGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.featurePropertiesGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.featurePropertiesGrid.Location = new System.Drawing.Point(11, 256);
             this.featurePropertiesGrid.Name = "featurePropertiesGrid";
             this.featurePropertiesGrid.Size = new System.Drawing.Size(596, 172);
@@ -1125,9 +1128,9 @@ namespace WarSetup
             // 
             // currentFileProperties
             // 
-            this.currentFileProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentFileProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.currentFileProperties.Location = new System.Drawing.Point(6, 202);
             this.currentFileProperties.Name = "currentFileProperties";
             this.currentFileProperties.Size = new System.Drawing.Size(598, 223);
@@ -1136,8 +1139,8 @@ namespace WarSetup
             // fileList
             // 
             this.fileList.AllowDrop = true;
-            this.fileList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.fileList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fileList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnName,
             this.columnDir,
@@ -1154,8 +1157,8 @@ namespace WarSetup
             this.fileList.TabIndex = 0;
             this.fileList.UseCompatibleStateImageBehavior = false;
             this.fileList.View = System.Windows.Forms.View.Details;
-            this.fileList.DragDrop += new System.Windows.Forms.DragEventHandler(this.fileList_DragDrop);
             this.fileList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.fileList_ItemSelectionChanged);
+            this.fileList.DragDrop += new System.Windows.Forms.DragEventHandler(this.fileList_DragDrop);
             this.fileList.DragEnter += new System.Windows.Forms.DragEventHandler(this.fileList_DragEnter);
             // 
             // columnName
@@ -1185,26 +1188,26 @@ namespace WarSetup
             this.toolStripDelete,
             this.setAsMainFeatureToolStripMenuItem});
             this.contextMenuFileList.Name = "contextMenuStrip1";
-            this.contextMenuFileList.Size = new System.Drawing.Size(231, 70);
+            this.contextMenuFileList.Size = new System.Drawing.Size(236, 70);
             // 
             // addFilesMenu
             // 
             this.addFilesMenu.Name = "addFilesMenu";
-            this.addFilesMenu.Size = new System.Drawing.Size(230, 22);
+            this.addFilesMenu.Size = new System.Drawing.Size(235, 22);
             this.addFilesMenu.Text = "&Add file(s)";
             this.addFilesMenu.Click += new System.EventHandler(this.addFilesMenu_Click);
             // 
             // toolStripDelete
             // 
             this.toolStripDelete.Name = "toolStripDelete";
-            this.toolStripDelete.Size = new System.Drawing.Size(230, 22);
+            this.toolStripDelete.Size = new System.Drawing.Size(235, 22);
             this.toolStripDelete.Text = "&Delete";
             this.toolStripDelete.Click += new System.EventHandler(this.toolStripDelete_Click);
             // 
             // setAsMainFeatureToolStripMenuItem
             // 
             this.setAsMainFeatureToolStripMenuItem.Name = "setAsMainFeatureToolStripMenuItem";
-            this.setAsMainFeatureToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.setAsMainFeatureToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.setAsMainFeatureToolStripMenuItem.Text = "&Set as Main Application Target";
             this.setAsMainFeatureToolStripMenuItem.Click += new System.EventHandler(this.setAsMainFeatureToolStripMenuItem_Click);
             // 
@@ -1229,9 +1232,9 @@ namespace WarSetup
             // 
             // directoryProperties
             // 
-            this.directoryProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.directoryProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.directoryProperties.Location = new System.Drawing.Point(6, 179);
             this.directoryProperties.Name = "directoryProperties";
             this.directoryProperties.Size = new System.Drawing.Size(605, 256);
@@ -1241,8 +1244,8 @@ namespace WarSetup
             // featureDirectoryList
             // 
             this.featureDirectoryList.AllowDrop = true;
-            this.featureDirectoryList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.featureDirectoryList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.featureDirectoryList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6});
@@ -1257,8 +1260,8 @@ namespace WarSetup
             this.featureDirectoryList.TabIndex = 1;
             this.featureDirectoryList.UseCompatibleStateImageBehavior = false;
             this.featureDirectoryList.View = System.Windows.Forms.View.Details;
-            this.featureDirectoryList.DragDrop += new System.Windows.Forms.DragEventHandler(this.featureDirectoryList_DragDrop);
             this.featureDirectoryList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.featureDirectoryList_ItemSelectionChanged);
+            this.featureDirectoryList.DragDrop += new System.Windows.Forms.DragEventHandler(this.featureDirectoryList_DragDrop);
             this.featureDirectoryList.DragEnter += new System.Windows.Forms.DragEventHandler(this.featureDirectoryList_DragEnter);
             // 
             // columnHeader5
@@ -1277,19 +1280,19 @@ namespace WarSetup
             this.addDirectoryMenu,
             this.MenuDeleteDirectory});
             this.contextMenuDirectories.Name = "contextMenuDirectories";
-            this.contextMenuDirectories.Size = new System.Drawing.Size(151, 48);
+            this.contextMenuDirectories.Size = new System.Drawing.Size(147, 48);
             // 
             // addDirectoryMenu
             // 
             this.addDirectoryMenu.Name = "addDirectoryMenu";
-            this.addDirectoryMenu.Size = new System.Drawing.Size(150, 22);
+            this.addDirectoryMenu.Size = new System.Drawing.Size(146, 22);
             this.addDirectoryMenu.Text = "&Add directory";
             this.addDirectoryMenu.Click += new System.EventHandler(this.addDirectoryMenu_Click);
             // 
             // MenuDeleteDirectory
             // 
             this.MenuDeleteDirectory.Name = "MenuDeleteDirectory";
-            this.MenuDeleteDirectory.Size = new System.Drawing.Size(150, 22);
+            this.MenuDeleteDirectory.Size = new System.Drawing.Size(146, 22);
             this.MenuDeleteDirectory.Text = "&Delete";
             this.MenuDeleteDirectory.Click += new System.EventHandler(this.MenuDeleteDirectory_Click);
             // 
@@ -1302,7 +1305,7 @@ namespace WarSetup
             this.label15.Size = new System.Drawing.Size(368, 13);
             this.label15.TabIndex = 0;
             this.label15.Text = "Files that match the pattern(s) in the listed directories are added automatically" +
-                "";
+    "";
             // 
             // tabShortcuts
             // 
@@ -1317,9 +1320,9 @@ namespace WarSetup
             // 
             // shortcutProperties
             // 
-            this.shortcutProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.shortcutProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.shortcutProperties.Location = new System.Drawing.Point(3, 191);
             this.shortcutProperties.Name = "shortcutProperties";
             this.shortcutProperties.Size = new System.Drawing.Size(604, 324);
@@ -1328,8 +1331,8 @@ namespace WarSetup
             // 
             // shortcutList
             // 
-            this.shortcutList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.shortcutList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.shortcutList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
             this.columnHeader8,
@@ -1368,19 +1371,19 @@ namespace WarSetup
             this.MenuAddShortcut,
             this.MenuDeleteShortcut});
             this.contextMenuShortcuts.Name = "contextMenuShortcuts";
-            this.contextMenuShortcuts.Size = new System.Drawing.Size(129, 48);
+            this.contextMenuShortcuts.Size = new System.Drawing.Size(124, 48);
             // 
             // MenuAddShortcut
             // 
             this.MenuAddShortcut.Name = "MenuAddShortcut";
-            this.MenuAddShortcut.Size = new System.Drawing.Size(128, 22);
+            this.MenuAddShortcut.Size = new System.Drawing.Size(123, 22);
             this.MenuAddShortcut.Text = "Add New";
             this.MenuAddShortcut.Click += new System.EventHandler(this.MenuAddShortcut_Click);
             // 
             // MenuDeleteShortcut
             // 
             this.MenuDeleteShortcut.Name = "MenuDeleteShortcut";
-            this.MenuDeleteShortcut.Size = new System.Drawing.Size(128, 22);
+            this.MenuDeleteShortcut.Size = new System.Drawing.Size(123, 22);
             this.MenuDeleteShortcut.Text = "Delete";
             this.MenuDeleteShortcut.Click += new System.EventHandler(this.MenuDeleteShortcut_Click);
             // 
@@ -1397,8 +1400,8 @@ namespace WarSetup
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.mergeModuleProperties);
             this.groupBox4.Controls.Add(this.mergeModulesList);
             this.groupBox4.Location = new System.Drawing.Point(8, 213);
@@ -1410,9 +1413,9 @@ namespace WarSetup
             // 
             // mergeModuleProperties
             // 
-            this.mergeModuleProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mergeModuleProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mergeModuleProperties.Location = new System.Drawing.Point(455, 16);
             this.mergeModuleProperties.Name = "mergeModuleProperties";
             this.mergeModuleProperties.Size = new System.Drawing.Size(400, 223);
@@ -1421,8 +1424,8 @@ namespace WarSetup
             // mergeModulesList
             // 
             this.mergeModulesList.AllowDrop = true;
-            this.mergeModulesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.mergeModulesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.mergeModulesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -1505,9 +1508,9 @@ namespace WarSetup
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.wixModuleProperties);
             this.groupBox3.Controls.Add(this.wixModulesList);
             this.groupBox3.Location = new System.Drawing.Point(8, 12);
@@ -1519,9 +1522,9 @@ namespace WarSetup
             // 
             // wixModuleProperties
             // 
-            this.wixModuleProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.wixModuleProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.wixModuleProperties.Location = new System.Drawing.Point(455, 16);
             this.wixModuleProperties.Name = "wixModuleProperties";
             this.wixModuleProperties.Size = new System.Drawing.Size(400, 171);
@@ -1530,8 +1533,8 @@ namespace WarSetup
             // wixModulesList
             // 
             this.wixModulesList.AllowDrop = true;
-            this.wixModulesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.wixModulesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.wixModulesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader10,
             this.columnHeader11});
@@ -1544,8 +1547,8 @@ namespace WarSetup
             this.wixModulesList.TabIndex = 0;
             this.wixModulesList.UseCompatibleStateImageBehavior = false;
             this.wixModulesList.View = System.Windows.Forms.View.Details;
-            this.wixModulesList.DragDrop += new System.Windows.Forms.DragEventHandler(this.wixModulesList_DragDrop);
             this.wixModulesList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.wixModulesList_ItemSelectionChanged);
+            this.wixModulesList.DragDrop += new System.Windows.Forms.DragEventHandler(this.wixModulesList_DragDrop);
             this.wixModulesList.DragEnter += new System.Windows.Forms.DragEventHandler(this.wixModulesList_DragEnter);
             // 
             // columnHeader10
@@ -1566,33 +1569,33 @@ namespace WarSetup
             this.menuCompileWixModule,
             this.menuEditWixModule});
             this.contextMenuWixModules.Name = "contextMenuWixModules";
-            this.contextMenuWixModules.Size = new System.Drawing.Size(123, 92);
+            this.contextMenuWixModules.Size = new System.Drawing.Size(120, 92);
             // 
             // addWixModuleMenu
             // 
             this.addWixModuleMenu.Name = "addWixModuleMenu";
-            this.addWixModuleMenu.Size = new System.Drawing.Size(122, 22);
+            this.addWixModuleMenu.Size = new System.Drawing.Size(119, 22);
             this.addWixModuleMenu.Text = "&Add";
             this.addWixModuleMenu.Click += new System.EventHandler(this.addWixModuleMenu_Click);
             // 
             // menuDeleteWixModule
             // 
             this.menuDeleteWixModule.Name = "menuDeleteWixModule";
-            this.menuDeleteWixModule.Size = new System.Drawing.Size(122, 22);
+            this.menuDeleteWixModule.Size = new System.Drawing.Size(119, 22);
             this.menuDeleteWixModule.Text = "&Delete";
             this.menuDeleteWixModule.Click += new System.EventHandler(this.menuDeleteWixModule_Click);
             // 
             // menuCompileWixModule
             // 
             this.menuCompileWixModule.Name = "menuCompileWixModule";
-            this.menuCompileWixModule.Size = new System.Drawing.Size(122, 22);
+            this.menuCompileWixModule.Size = new System.Drawing.Size(119, 22);
             this.menuCompileWixModule.Text = "&Compile";
             this.menuCompileWixModule.Click += new System.EventHandler(this.menuCompileWixModule_Click);
             // 
             // menuEditWixModule
             // 
             this.menuEditWixModule.Name = "menuEditWixModule";
-            this.menuEditWixModule.Size = new System.Drawing.Size(122, 22);
+            this.menuEditWixModule.Size = new System.Drawing.Size(119, 22);
             this.menuEditWixModule.Text = "&Edit";
             this.menuEditWixModule.Click += new System.EventHandler(this.menuEditWixModule_Click);
             // 
@@ -1608,9 +1611,9 @@ namespace WarSetup
             // 
             // compilerOutput
             // 
-            this.compilerOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.compilerOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.compilerOutput.Location = new System.Drawing.Point(0, 0);
             this.compilerOutput.Multiline = true;
             this.compilerOutput.Name = "compilerOutput";
@@ -1648,6 +1651,7 @@ namespace WarSetup
             this.tabFeatures.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.PropertiesTab.ResumeLayout(false);
             this.tabProperties.ResumeLayout(false);

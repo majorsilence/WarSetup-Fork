@@ -2262,6 +2262,8 @@ namespace WarSetup
                         break;
                 }
 
+                // .NET 4.0 FULL
+                // .NET 4.0 CLIENT
                 switch (projectRequireDotNetVersion)
                 {
                     case ".NET 2.0":
@@ -2275,6 +2277,14 @@ namespace WarSetup
                     case ".NET 3.5":
                         AddPropertyRef("NETFRAMEWORK35");
                         AddCondition("This product requires the .NET Framework 3.5 to be installed", "Installed OR NETFRAMEWORK35");
+                        break;
+                    case ".NET 4.0 FULL":
+                        AddPropertyRef("NETFRAMEWORK40FULL");
+                        AddCondition("This product requires the .NET Framework 4.0 Full to be installed", "Installed OR NETFRAMEWORK40FULL");
+                        break;
+                    case ".NET 4.0 CLIENT":
+                        AddPropertyRef("NETFRAMEWORK40CLIENT");
+                        AddCondition("This product requires the .NET Framework 4.0 Client to be installed", "Installed OR NETFRAMEWORK40CLIENT");
                         break;
                 }
 
