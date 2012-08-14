@@ -73,7 +73,6 @@ namespace WarSetup
             this.Name = "CompileDlg";
             this.ShowInTaskbar = false;
             this.Text = "Compiling. Please wait...";
-            this.Load += new System.EventHandler(this.CompileDlg_Load);
             this.Shown += new System.EventHandler(this.CompileDlg_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
