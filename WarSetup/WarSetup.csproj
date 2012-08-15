@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WarSetup</RootNamespace>
-    <AssemblyName>WarSetup</AssemblyName>
+    <AssemblyName>WarPackager</AssemblyName>
     <StartupObject>
     </StartupObject>
     <ApplicationIcon>Resources\WarSetupIcon.ico</ApplicationIcon>

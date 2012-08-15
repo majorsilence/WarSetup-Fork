@@ -14,7 +14,8 @@ mkdir .\warsetup-fork-dot-net-4-x86
 mkdir .\warsetup-fork-dot-net-4-x86\Licenses
 mkdir .\warsetup-fork-dot-net-4-x86\CustomActions
 
-copy ..\WarSetup\bin\x86\Release\WarSetup.exe .\warsetup-fork-dot-net-4-x86\WarSetup.exe /Y
+copy ..\WarSetup\bin\x86\Release\WarPackager.exe .\warsetup-fork-dot-net-4-x86\WarPackager.exe /Y
+copy ..\WarSetup\bin\x86\Release\WarPackager.exe.config .\warsetup-fork-dot-net-4-x86\WarPackager.exe.config /Y
 copy "..\WarSetup\CustomActions\WarSetupPlugin.dll" ".\warsetup-fork-dot-net-4-x86\CustomActions\WarSetupPlugin.dll" /Y
 copy "..\WarSetup\CustomActions\WarSetupPlugin.exp" ".\warsetup-fork-dot-net-4-x86\CustomActions\WarSetupPlugin.exp" /Y
 copy "..\WarSetup\CustomActions\WarSetupPlugin.lib" ".\warsetup-fork-dot-net-4-x86\CustomActions\WarSetupPlugin.lib" /Y

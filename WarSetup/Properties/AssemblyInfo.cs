@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WarSetup")]
-[assembly: AssemblyDescription("War Setup is an application to make .msi software installation packages. "
+[assembly: AssemblyTitle("WarPackager")]
+[assembly: AssemblyDescription("War Packager is an application to make .msi software installation packages. "
     + "It uses the free Wix toolset from Microsoft to build the .msi files."
     + "\r\n\r\n"
     + "War Setup is designed to be /very/ easy to use. It's the perfect install tool for the "
@@ -20,11 +20,11 @@ using System.Runtime.InteropServices;
     + "\r\n\r\n"
     + "If you need commercial support, it's available from War Setups homepage."
     + "\r\n\r\n"
-    + "War Setup is written in C# by Jarle (jgaa) Aase."
+    + "War Packager is written in C# by Jarle (jgaa) Aase."
     )]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jgaa's Internet")]
-[assembly: AssemblyProduct("War Setup")]
+[assembly: AssemblyProduct("War Packager")]
 [assembly: AssemblyCopyright("Copyright © Jarle Aase 1996 - 2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
