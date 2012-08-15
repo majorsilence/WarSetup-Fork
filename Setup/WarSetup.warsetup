@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WarSetup-Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" projectRunAfterInstall="true" mainTargetApp="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" nextUniqueId="2427" projectName="War Setup Fork" projectUuid="91025336-8fed-40ff-9f5d-931cd458e08c" projectUpgradeUuid="93d3ad65-ddca-442c-82e8-de5c1f5f9e4a" projectVersion="3.13.1" projectOrganization="MajorSilence" projectFromWindowsVersion="Windows XP SP 3" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Users\Peter\Desktop" projectRequireDotNetVersion=".NET 4.0 FULL" projectTargetName="WarSetup-3.13.1" projectType="0" projectUserInterface="WixUI_Mondo">
+<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="true" mainTargetApp="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" nextUniqueId="2463" projectName="War Setup Fork" projectUuid="eb652f25-b365-4842-9e2f-0fef14769333" projectUpgradeUuid="93d3ad65-ddca-442c-82e8-de5c1f5f9e4a" projectVersion="3.13.1" projectOrganization="MajorSilence" projectFromWindowsVersion="Windows XP SP 3" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Users\Peter\Desktop" projectRequireDotNetVersion=".NET 4.0 FULL" projectTargetName="WarSetup-3.13.1" projectType="0" projectUserInterface="WixUI_Mondo">
   <LicencePaths>
     <string>C:\Users\Peter\Projects\WarSetup-Fork\WarSetup\bin\x86\Release\Licenses</string>
   </LicencePaths>
@@ -22,12 +22,6 @@
       <components componentId="ID4612C7484FAE7E74529085884786FD8E" componentGuid="3e47df3c-25af-4e0f-8091-f8b0ded56bfe">
         <componentFiles fileId="WARSETUP_ICON" srcName="WarSetup.ico" srcDirectory="..\WarSetup\icons" dstName="WarSetup.ico" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="WarPackager" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
           <service StartWhenInstalled="true" Remove="both" id="ID833B5CC7606347A235A36DBC20AD9163" isService="false" userAccount="System" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
-        </componentFiles>
-        <addToCreateFolder>false</addToCreateFolder>
-      </components>
-      <components componentId="ID1289" componentGuid="71d50f63-9f97-4c1d-bc73-b95c952411fa">
-        <componentFiles fileId="ID_afe2f22f_39af_41f6_96ba_1aa152640e9c" srcName="pad_file.xml" srcDirectory=".." dstName="pad_file.xml" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="pad_file" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
-          <service StartWhenInstalled="true" Remove="both" id="ID1288" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
