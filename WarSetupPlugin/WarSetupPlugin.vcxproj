@@ -104,9 +104,6 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="WarSetupPlugin.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="WarSetupPlugin.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
