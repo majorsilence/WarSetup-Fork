@@ -99,3 +99,7 @@ WarPackager.exe.config
 WarPackager.pdb
 WarPackager.exe
 WarPackager.pdb
+WarPackager.vshost.exe
+WarPackager.vshost.exe.config
+WarPackager.vshost.exe.manifest
+WarSetup.csproj.GenerateResource.Cache
