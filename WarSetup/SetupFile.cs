@@ -32,7 +32,9 @@ namespace WarSetup
         private bool _isComModule = false;
         private List<FileExtension> _fileExtensions;
         private ServiceInstall _service;
-        private bool _isTrueTypeFont = false;        
+        private bool _isTrueTypeFont = false;
+        private bool _executeOnInstall=false;
+        private string _executeOnInstallParameters = "";
         #endregion
 
         #region Properties
@@ -259,7 +261,30 @@ namespace WarSetup
             get { return _service; }
             set { _service = value; }
         }
-        
+
+
+        [
+           CategoryAttribute("Execute"),
+           DescriptionAttribute("Execute this executable on finish of installation."),
+           XmlElement("executeOnInstall")
+        ]
+        public bool ExecuteOnInstall
+        {
+            get { return _executeOnInstall; }
+            set { _executeOnInstall = value; }
+        }
+
+        [
+           CategoryAttribute("Execute"),
+           DescriptionAttribute("Parameters that are passed to this executable."),
+           XmlElement("executeOnInstallParameters")
+        ]
+        public string ExecuteOnInstallParameters
+        {
+            get { return _executeOnInstallParameters; }
+            set { _executeOnInstallParameters = value; }
+        }
+
         #endregion
 
         #region Methods
