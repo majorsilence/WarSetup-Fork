@@ -103,3 +103,11 @@ WarPackager.vshost.exe
 WarPackager.vshost.exe.config
 WarPackager.vshost.exe.manifest
 WarSetup.csproj.GenerateResource.Cache
+/WarSetup.sdf
+/WarSetup.v11.suo
+/WarSetup/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+/WarSetup/obj/Debug/WarSetup.csprojResolveAssemblyReference.cache
+/WarSetupPlugin/Debug/link-rc.read.1.tlog
+/WarSetupPlugin/Debug/link-rc.write.1.tlog
+/WarSetupPlugin/Debug/vc110.idb
+/WarSetupPlugin/Debug/vc110.pdb
