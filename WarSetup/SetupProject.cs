@@ -907,6 +907,7 @@ namespace WarSetup
 
             foreach (SetupFile file in component.componentFiles)
             {
+                
                 XmlElement file_node = doc.CreateElement("File");
                 file_node.SetAttribute("Id", file.fileId);
                 string src_path = Path.Combine(file.srcDirectory, file.srcName);
@@ -915,6 +916,11 @@ namespace WarSetup
                     file_node.SetAttribute("DiskId", GetMedia(src_path).ToString());
 
                 SetNameAttribute(file_node, file.dstName);
+
+                if (file.ExecuteOnInstall)
+                {
+                    AddExecuteOnInstall(file);
+                }
 
                 /* TODO: Create a dedicated component for user-shortcuts (for each file)
                  * to avoid the "ICE57: Component 'IDC5A7B8F2554B02E5FC9D5ED7E684B285' 
@@ -1024,6 +1030,31 @@ namespace WarSetup
             }
 
             return component_node;
+        }
+
+        private void AddExecuteOnInstall(SetupFile file)
+        {
+
+            if (null != this.product)
+            {
+                string id = GetUniqueId().ToUpper();
+                XmlElement p1 = doc.CreateElement("CustomAction");
+                p1.SetAttribute("Id", id);
+                p1.SetAttribute("FileKey", file.fileId);
+                p1.SetAttribute("ExeCommand", file.ExecuteOnInstallParameters);
+                p1.SetAttribute("Execute", "immediate");
+                p1.SetAttribute("Return", "asyncNoWait");
+                this.product.AppendChild(p1);
+
+
+                if (null != _install_execute_sequence)
+                {
+                    XmlElement p2 = doc.CreateElement("Custom");
+                    p2.SetAttribute("Action", id);
+                    p2.SetAttribute("After", "InstallFinalize");
+                    _install_execute_sequence.AppendChild(p2);
+                }
+            }
         }
 
         private bool FixupInstallDir(List<SetupFeature> features)
