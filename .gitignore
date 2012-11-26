@@ -111,3 +111,6 @@ WarSetup.csproj.GenerateResource.Cache
 /WarSetupPlugin/Debug/link-rc.write.1.tlog
 /WarSetupPlugin/Debug/vc110.idb
 /WarSetupPlugin/Debug/vc110.pdb
+/WarSetupPlugin/Release/link-rc.read.1.tlog
+/WarSetupPlugin/Release/link-rc.write.1.tlog
+/WarSetupPlugin/Release/vc110.pdb
