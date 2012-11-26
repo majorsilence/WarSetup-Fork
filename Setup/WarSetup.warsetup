@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="true" mainTargetApp="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" nextUniqueId="2463" projectName="War Setup Fork" projectUuid="eb652f25-b365-4842-9e2f-0fef14769333" projectUpgradeUuid="93d3ad65-ddca-442c-82e8-de5c1f5f9e4a" projectVersion="3.13.1" projectOrganization="MajorSilence" projectFromWindowsVersion="Windows XP SP 3" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Users\Peter\Desktop" projectRequireDotNetVersion=".NET 4.0 FULL" projectTargetName="WarSetup-3.13.1" projectType="0" projectUserInterface="WixUI_Mondo">
+<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="true" mainTargetApp="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" nextUniqueId="2545" projectName="War Setup Fork" projectUuid="135732bb-a940-41fa-b8df-b3df54cdcae6" projectUpgradeUuid="93d3ad65-ddca-442c-82e8-de5c1f5f9e4a" projectVersion="3.13.4" projectOrganization="MajorSilence" projectFromWindowsVersion="Windows XP SP 3" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Users\Peter\Desktop" projectRequireDotNetVersion=".NET 4.0 FULL" projectTargetName="WarSetup-3.13.4" projectType="0" projectUserInterface="WixUI_Mondo">
   <LicencePaths>
     <string>C:\Users\Peter\Projects\WarSetup-Fork\WarSetup\bin\x86\Release\Licenses</string>
   </LicencePaths>
@@ -10,18 +10,24 @@
         <componentFiles fileId="ID_90dce36c_c365_4169_b6ca_46ac06b049bf" srcName="WarPackager.exe" srcDirectory="..\WarSetup\bin\x86\Release" dstName="WarPackager.exe" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="War Setup 3" shortcutInProgramFilesMenu="true" shortcutOnDesktop="true" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="War Setup 3 Project Manager">
           <fileExtensions Id="ID3FC65E18ED4FD7A3AADB6C57150EB472" Extension="warsetup" MimeType="Application/WarSetup" Description="War Setup 3 Project File" IconIndex="0" />
           <service StartWhenInstalled="true" Remove="both" id="ID8DB0290C5F2F2034357CA4BC9B2A4C26" isService="false" userAccount="System" userPassword="" cmdLineArguments="" description="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+          <executeOnInstall>false</executeOnInstall>
+          <executeOnInstallParameters />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
       <components componentId="ID459338EC11D0E4774B1B7BE239B0584B" componentGuid="d86241be-3855-476a-b8ed-04fe1e0156ed">
         <componentFiles fileId="ID_a21552d0_9d9a_42ed_9a14_5fee05c9942a" srcName="WarPackager.exe.config" srcDirectory="..\WarSetup\bin\x86\Release" dstName="WarPackager.exe.config" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="WarPackager.exe" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
           <service StartWhenInstalled="true" Remove="both" id="IDC836916821B6D0BCD68026453D2C8821" isService="false" userAccount="System" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+          <executeOnInstall>false</executeOnInstall>
+          <executeOnInstallParameters />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
       <components componentId="ID4612C7484FAE7E74529085884786FD8E" componentGuid="3e47df3c-25af-4e0f-8091-f8b0ded56bfe">
         <componentFiles fileId="WARSETUP_ICON" srcName="WarSetup.ico" srcDirectory="..\WarSetup\icons" dstName="WarSetup.ico" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="WarPackager" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
           <service StartWhenInstalled="true" Remove="both" id="ID833B5CC7606347A235A36DBC20AD9163" isService="false" userAccount="System" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+          <executeOnInstall>false</executeOnInstall>
+          <executeOnInstallParameters />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
@@ -41,6 +47,8 @@
       <components componentId="ID68A8F7634F6CC5F9D73F4B01B9D28250" componentGuid="9927da51-35c4-4a48-a8da-f1474cede83c">
         <componentFiles fileId="ID_59756ff1_62e7_4a14_b169_d82ec25c0d29" srcName="WarSetup_3_Users_Guide.pdf" srcDirectory="..\Documentation" dstName="WarSetup_3_Users_Guide.pdf" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="Users Guide" shortcutInProgramFilesMenu="true" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
           <service StartWhenInstalled="true" Remove="both" id="ID71200415C656E7CA880CF7E4D0ACFDC6" isService="false" userAccount="System" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+          <executeOnInstall>false</executeOnInstall>
+          <executeOnInstallParameters />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
