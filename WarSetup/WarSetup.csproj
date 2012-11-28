@@ -215,6 +215,9 @@
     <Content Include="..\Todo.txt">
       <Link>Todo.txt</Link>
     </Content>
+    <None Include="Bootstrap\CrystalReports12.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="icons\File.ico" />
     <Content Include="icons\MainFeature.ico" />
     <None Include="Resources\openfolderHS.png" />

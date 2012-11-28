@@ -96,11 +96,31 @@ namespace WarSetup
                 }
 
                 ProcessCommandLineArgs();
+                LoadBootstrapOptions();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+
+        }
+
+        private void LoadBootstrapOptions()
+        {
+            string cwd = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "Bootstrap");
+            string[] filePaths = Directory.GetFiles(cwd, "*.xml");
+            var dict = new Dictionary<string, string>();
+            
+
+            foreach (string file in filePaths)
+            {
+                dict.Add(System.IO.Path.GetFileName(file), file);
+            }
+
+            comboBoxBootStrap.DataSource = new BindingSource(dict, null);
+            comboBoxBootStrap.DisplayMember = "Key";
+            comboBoxBootStrap.ValueMember = "Value";
         }
 
         private void ProcessCommandLineArgs()
@@ -1390,6 +1410,26 @@ namespace WarSetup
         private void projectLicense_DropDown(object sender, EventArgs e)
         {
             LoadLicenses();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBoxBootStrap.SelectedValue == null)
+            {
+                return;
+            }
+
+            listBoxBootstrap.Items.Add(comboBoxBootStrap.SelectedValue.ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBoxBootStrap.SelectedValue == null)
+            {
+                return;
+            }
+
+            listBoxBootstrap.Items.Remove(comboBoxBootStrap.SelectedValue);
         }
     }
 }

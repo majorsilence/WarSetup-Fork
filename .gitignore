@@ -114,3 +114,7 @@ WarSetup.csproj.GenerateResource.Cache
 /WarSetupPlugin/Release/link-rc.read.1.tlog
 /WarSetupPlugin/Release/link-rc.write.1.tlog
 /WarSetupPlugin/Release/vc110.pdb
+/WarSetup/bin/x86/Debug/Bootstrap/CrystalReports12.xml
+/WarSetup/bin/x86/Release/Bootstrap/CrystalReports12.xml
+/WarSetup/obj/x86/Release/DesignTimeResolveAssemblyReferences.cache
+/WarSetup/obj/x86/Release/WarSetup.csprojResolveAssemblyReference.cache
