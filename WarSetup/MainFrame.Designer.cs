@@ -99,6 +99,11 @@ namespace WarSetup
             this.project64BitTarget = new System.Windows.Forms.CheckBox();
             this.projectType = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabBootStrap = new System.Windows.Forms.TabPage();
+            this.buttonRemoveBootstrap = new System.Windows.Forms.Button();
+            this.listBoxBootstrap = new System.Windows.Forms.ListBox();
+            this.buttonAddBootstrap = new System.Windows.Forms.Button();
+            this.comboBoxBootStrap = new System.Windows.Forms.ComboBox();
             this.tabFeatures = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PropertiesTab = new System.Windows.Forms.TabControl();
@@ -176,11 +181,6 @@ namespace WarSetup
             this.tabOutput = new System.Windows.Forms.TabPage();
             this.compilerOutput = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.tabBootStrap = new System.Windows.Forms.TabPage();
-            this.comboBoxBootStrap = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBoxBootstrap = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.contextMenuFeatures.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -189,6 +189,7 @@ namespace WarSetup
             this.groupBox1.SuspendLayout();
             this.sss.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabBootStrap.SuspendLayout();
             this.tabFeatures.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -209,7 +210,6 @@ namespace WarSetup
             this.groupBox3.SuspendLayout();
             this.contextMenuWixModules.SuspendLayout();
             this.tabOutput.SuspendLayout();
-            this.tabBootStrap.SuspendLayout();
             this.SuspendLayout();
             // 
             // featuresTree
@@ -493,7 +493,7 @@ namespace WarSetup
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -914,6 +914,58 @@ namespace WarSetup
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(882, 515);
             this.tabControl1.TabIndex = 2;
+            // 
+            // tabBootStrap
+            // 
+            this.tabBootStrap.Controls.Add(this.buttonRemoveBootstrap);
+            this.tabBootStrap.Controls.Add(this.listBoxBootstrap);
+            this.tabBootStrap.Controls.Add(this.buttonAddBootstrap);
+            this.tabBootStrap.Controls.Add(this.comboBoxBootStrap);
+            this.tabBootStrap.Location = new System.Drawing.Point(4, 22);
+            this.tabBootStrap.Name = "tabBootStrap";
+            this.tabBootStrap.Size = new System.Drawing.Size(874, 489);
+            this.tabBootStrap.TabIndex = 4;
+            this.tabBootStrap.Text = "Bootstrap";
+            this.tabBootStrap.UseVisualStyleBackColor = true;
+            // 
+            // buttonRemoveBootstrap
+            // 
+            this.buttonRemoveBootstrap.Location = new System.Drawing.Point(678, 30);
+            this.buttonRemoveBootstrap.Name = "buttonRemoveBootstrap";
+            this.buttonRemoveBootstrap.Size = new System.Drawing.Size(188, 23);
+            this.buttonRemoveBootstrap.TabIndex = 6;
+            this.buttonRemoveBootstrap.Text = "Remove Selected Prerequisite";
+            this.buttonRemoveBootstrap.UseVisualStyleBackColor = true;
+            this.buttonRemoveBootstrap.Click += new System.EventHandler(this.buttonRemoveBootstrap_Click);
+            // 
+            // listBoxBootstrap
+            // 
+            this.listBoxBootstrap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxBootstrap.FormattingEnabled = true;
+            this.listBoxBootstrap.Location = new System.Drawing.Point(8, 59);
+            this.listBoxBootstrap.Name = "listBoxBootstrap";
+            this.listBoxBootstrap.Size = new System.Drawing.Size(863, 420);
+            this.listBoxBootstrap.TabIndex = 5;
+            // 
+            // buttonAddBootstrap
+            // 
+            this.buttonAddBootstrap.Location = new System.Drawing.Point(224, 30);
+            this.buttonAddBootstrap.Name = "buttonAddBootstrap";
+            this.buttonAddBootstrap.Size = new System.Drawing.Size(143, 23);
+            this.buttonAddBootstrap.TabIndex = 4;
+            this.buttonAddBootstrap.Text = "Add Prerequisite";
+            this.buttonAddBootstrap.UseVisualStyleBackColor = true;
+            this.buttonAddBootstrap.Click += new System.EventHandler(this.buttonAddBootstrap_Click);
+            // 
+            // comboBoxBootStrap
+            // 
+            this.comboBoxBootStrap.FormattingEnabled = true;
+            this.comboBoxBootStrap.Location = new System.Drawing.Point(8, 32);
+            this.comboBoxBootStrap.Name = "comboBoxBootStrap";
+            this.comboBoxBootStrap.Size = new System.Drawing.Size(210, 21);
+            this.comboBoxBootStrap.TabIndex = 3;
             // 
             // tabFeatures
             // 
@@ -1635,58 +1687,6 @@ namespace WarSetup
             this.compilerOutput.TabIndex = 0;
             this.compilerOutput.WordWrap = false;
             // 
-            // tabBootStrap
-            // 
-            this.tabBootStrap.Controls.Add(this.button2);
-            this.tabBootStrap.Controls.Add(this.listBoxBootstrap);
-            this.tabBootStrap.Controls.Add(this.button1);
-            this.tabBootStrap.Controls.Add(this.comboBoxBootStrap);
-            this.tabBootStrap.Location = new System.Drawing.Point(4, 22);
-            this.tabBootStrap.Name = "tabBootStrap";
-            this.tabBootStrap.Size = new System.Drawing.Size(874, 489);
-            this.tabBootStrap.TabIndex = 4;
-            this.tabBootStrap.Text = "Bootstrap";
-            this.tabBootStrap.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxBootStrap
-            // 
-            this.comboBoxBootStrap.FormattingEnabled = true;
-            this.comboBoxBootStrap.Location = new System.Drawing.Point(8, 32);
-            this.comboBoxBootStrap.Name = "comboBoxBootStrap";
-            this.comboBoxBootStrap.Size = new System.Drawing.Size(210, 21);
-            this.comboBoxBootStrap.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(224, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Add Prerequisite";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listBoxBootstrap
-            // 
-            this.listBoxBootstrap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBoxBootstrap.FormattingEnabled = true;
-            this.listBoxBootstrap.Location = new System.Drawing.Point(8, 59);
-            this.listBoxBootstrap.Name = "listBoxBootstrap";
-            this.listBoxBootstrap.Size = new System.Drawing.Size(863, 420);
-            this.listBoxBootstrap.TabIndex = 5;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(678, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Remove Selected Prerequisite";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1713,6 +1713,7 @@ namespace WarSetup
             this.sss.ResumeLayout(false);
             this.sss.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabBootStrap.ResumeLayout(false);
             this.tabFeatures.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -1737,7 +1738,6 @@ namespace WarSetup
             this.contextMenuWixModules.ResumeLayout(false);
             this.tabOutput.ResumeLayout(false);
             this.tabOutput.PerformLayout();
-            this.tabBootStrap.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1892,10 +1892,10 @@ namespace WarSetup
         private System.Windows.Forms.ComboBox projectRequireDotNetVersion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabBootStrap;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddBootstrap;
         private System.Windows.Forms.ComboBox comboBoxBootStrap;
         private System.Windows.Forms.ListBox listBoxBootstrap;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonRemoveBootstrap;
     
     }
 }

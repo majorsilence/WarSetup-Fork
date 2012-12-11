@@ -126,6 +126,7 @@ namespace WarSetup
         private bool _projectRunAfterInstall = true;
         private bool _virgin = true;
         private bool _useSeqenceNumers = true;
+        private List<SetupBootstrap> _projectBootstrap;
 
         #region Compile-time variables
 
@@ -378,6 +379,20 @@ namespace WarSetup
             }
         }
 
+        [XmlElement("projectBootstrap")]
+        public List<SetupBootstrap> projectBootstrap
+        {
+            get
+            {
+                return _projectBootstrap;
+            }
+
+            set
+            {
+                _projectBootstrap = value;
+            }
+        }
+
         [XmlElement("projectMergeModules")]
         public List<MergeModule> projectMergeModules
         {
@@ -511,6 +526,7 @@ namespace WarSetup
             _projectWixModules = new List<WixModule>();
             _projectProperties.UiCultures.Clear();
             _License = new LicenseData();
+            _projectBootstrap = new List<SetupBootstrap>();
         }
 
         public void InitializeDefaults()
@@ -1834,7 +1850,15 @@ namespace WarSetup
 
             XmlElement chain = doc.CreateElement("Chain");
             bund.AppendChild(chain);
-            
+
+
+            foreach (SetupBootstrap item in _projectBootstrap)
+            {
+                XmlElement packageGroupRef = doc.CreateElement("PackageGroupRef");
+                packageGroupRef.SetAttribute("Id", "TheID");
+                chain.AppendChild(packageGroupRef);
+            }
+
 
             return bund;
 

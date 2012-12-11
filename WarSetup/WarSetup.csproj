@@ -190,6 +190,7 @@
     <Compile Include="ServiceDependenc.cs" />
     <Compile Include="ServiceInstall.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SetupBootstrap.cs" />
     <Compile Include="SetupComponent.cs" />
     <Compile Include="SetupDirectory.cs" />
     <Compile Include="SetupFeature.cs" />
@@ -218,6 +219,7 @@
     <None Include="Bootstrap\CrystalReports12.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="Bootstrap\MyFyiReporting453.xml" />
     <Content Include="icons\File.ico" />
     <Content Include="icons\MainFeature.ico" />
     <None Include="Resources\openfolderHS.png" />

@@ -1,14 +1,11 @@
 <?xml version="1.0">
     <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
       <Fragment>
-        <PackageGroup Id="MyPackage">
-            <ExePackage 
+        <PackageGroup Id="CrystalReports12">
+            <MsiPackage 
               SourceFile="[sources]\packages\shared\CRRuntime_12_4_mlb.msi"
-              DetectCondition="ExeDetectedVariable"
               DownloadUrl="http://resources.businessobjects.com/support/downloads/redistributables/cr_120/redist/x86/CRRuntime_12_4_mlb.msi"
-              InstallCommand="/q /ACTION=Install"
-              RepairCommand="/q ACTION=Repair /hideconsole"
-              UninstallCommand="/q ACTION=Uninstall /hideconsole" />
+              />
         </PackageGroup>
       </Fragment>
     </Wix>

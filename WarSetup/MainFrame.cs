@@ -85,7 +85,8 @@ namespace WarSetup
 
                 BindData();
                 SynchFeatures(true);
-
+                LoadBootstrap();
+                
                 ReloadMergeModuleList();
                 ReloadWixModuleList();
                 InitLicense();
@@ -429,6 +430,7 @@ namespace WarSetup
                     featuresTree.SelectedNode = featuresTree.Nodes[0];
             }
         }
+
 
         private void SaveFile()
         {
@@ -1412,25 +1414,50 @@ namespace WarSetup
             LoadLicenses();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadBootstrap()
+        {
+            foreach (SetupBootstrap item in currentProject.projectBootstrap)
+            {
+                listBoxBootstrap.Items.Add(item.BundlePath);
+            }
+        }
+
+        private void buttonAddBootstrap_Click(object sender, EventArgs e)
+        {
+
+            if (comboBoxBootStrap.SelectedValue == null)
+            {
+                return;
+            }
+
+            SetupBootstrap item = new SetupBootstrap();
+            item.BundleName = System.IO.Path.GetFileName(comboBoxBootStrap.SelectedValue.ToString());
+            item.BundlePath = comboBoxBootStrap.SelectedValue.ToString();
+            currentProject.projectBootstrap.Add(item);
+            listBoxBootstrap.Items.Add(item.BundlePath);
+        }
+
+        private void buttonRemoveBootstrap_Click(object sender, EventArgs e)
         {
             if (comboBoxBootStrap.SelectedValue == null)
             {
                 return;
             }
 
-            listBoxBootstrap.Items.Add(comboBoxBootStrap.SelectedValue.ToString());
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (comboBoxBootStrap.SelectedValue == null)
+            foreach (SetupBootstrap item in currentProject.projectBootstrap)
             {
-                return;
+                if (item.BundlePath == comboBoxBootStrap.SelectedValue)
+                {
+                    currentProject.projectBootstrap.Remove(item);
+                    break;
+                }
             }
 
             listBoxBootstrap.Items.Remove(comboBoxBootStrap.SelectedValue);
+
+
         }
+
     }
 }
 

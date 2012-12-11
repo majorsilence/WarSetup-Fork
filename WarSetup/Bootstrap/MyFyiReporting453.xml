@@ -1,0 +1,10 @@
+﻿<?xml version="1.0">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <PackageGroup Id="MyFyiReporting453">
+      <MsiPackage
+        DownloadUrl="https://github.com/downloads/majorsilence/My-FyiReporting/4.5.3-setup-my-fyiReporting-dot-net4-x86.msi"
+              />
+    </PackageGroup>
+  </Fragment>
+</Wix>
