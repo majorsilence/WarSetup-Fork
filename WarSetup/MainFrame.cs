@@ -85,7 +85,6 @@ namespace WarSetup
 
                 BindData();
                 SynchFeatures(true);
-                LoadBootstrap();
                 
                 ReloadMergeModuleList();
                 ReloadWixModuleList();
@@ -383,6 +382,7 @@ namespace WarSetup
                 }
 
                 BindData();
+                LoadBootstrap();
                 projectNeedSave = false;
                 SynchFeatures(true);
                 ReloadMergeModuleList();
@@ -1453,7 +1453,7 @@ namespace WarSetup
 
             foreach (SetupBootstrap item in currentProject.projectBootstrap)
             {
-                if (item.BundlePath == comboBoxBootStrap.SelectedValue)
+                if (item.BundlePath == comboBoxBootStrap.SelectedValue.ToString())
                 {
                     currentProject.projectBootstrap.Remove(item);
                     break;

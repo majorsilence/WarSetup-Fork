@@ -219,7 +219,9 @@
     <None Include="Bootstrap\CrystalReports12.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Bootstrap\MyFyiReporting453.xml" />
+    <None Include="Bootstrap\MyFyiReporting453.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="icons\File.ico" />
     <Content Include="icons\MainFeature.ico" />
     <None Include="Resources\openfolderHS.png" />
