@@ -126,6 +126,8 @@ namespace WarSetup
         private bool _projectRunAfterInstall = true;
         private bool _virgin = true;
         private bool _useSeqenceNumers = true;
+        private bool _overRideMenuShortcutDir = false;
+        private string _menuShortcutDirName = "";
         private List<SetupBootstrap> _projectBootstrap;
 
         #region Compile-time variables
@@ -248,6 +250,21 @@ namespace WarSetup
         {
             get { return _virgin; }
             set { _virgin = value; }
+        }
+
+        [XmlAttribute("menuShortcutDirName")]
+        public string menuShortcutDirName
+        {
+            get { return _menuShortcutDirName; }
+            set { _menuShortcutDirName = value; }
+        }
+
+        
+        [XmlAttribute("overRideMenuShortcutDir")]
+        public bool overRideMenuShortcutDir
+        {
+            get { return _overRideMenuShortcutDir; }
+            set { _overRideMenuShortcutDir = value; }
         }
 
 
@@ -2102,7 +2119,14 @@ namespace WarSetup
 
                 my_program_menu = doc.CreateElement("Directory");
                 my_program_menu.SetAttribute("Id", "ProgramMenuDir");
-                SetNameAttribute(my_program_menu, projectName);
+                if (overRideMenuShortcutDir)
+                {
+                    SetNameAttribute(my_program_menu, menuShortcutDirName);
+                }
+                else
+                {
+                    SetNameAttribute(my_program_menu, projectName);
+                }
                 program_menu.AppendChild(my_program_menu);
                 AddDeleteFolder("ProgramMenuDir", my_program_menu);
 

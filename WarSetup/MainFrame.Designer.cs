@@ -181,6 +181,9 @@ namespace WarSetup
             this.tabOutput = new System.Windows.Forms.TabPage();
             this.compilerOutput = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.projectOverrideShortcutMenuDirName = new System.Windows.Forms.CheckBox();
+            this.projectShortCutMenuDirName = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.contextMenuFeatures.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -546,7 +549,7 @@ namespace WarSetup
             this.tabProject.Location = new System.Drawing.Point(4, 22);
             this.tabProject.Name = "tabProject";
             this.tabProject.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProject.Size = new System.Drawing.Size(874, 489);
+            this.tabProject.Size = new System.Drawing.Size(874, 568);
             this.tabProject.TabIndex = 0;
             this.tabProject.Text = "Project";
             this.tabProject.UseVisualStyleBackColor = true;
@@ -558,7 +561,7 @@ namespace WarSetup
             | System.Windows.Forms.AnchorStyles.Right)));
             this.projectProperties.Location = new System.Drawing.Point(522, 6);
             this.projectProperties.Name = "projectProperties";
-            this.projectProperties.Size = new System.Drawing.Size(344, 471);
+            this.projectProperties.Size = new System.Drawing.Size(344, 550);
             this.projectProperties.TabIndex = 0;
             // 
             // groupBox2
@@ -568,7 +571,7 @@ namespace WarSetup
             this.groupBox2.Controls.Add(this.projectTargetDirectory);
             this.groupBox2.Controls.Add(this.targetDirButton);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(8, 406);
+            this.groupBox2.Location = new System.Drawing.Point(8, 427);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(505, 73);
             this.groupBox2.TabIndex = 11;
@@ -629,6 +632,8 @@ namespace WarSetup
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.projectShortCutMenuDirName);
+            this.groupBox1.Controls.Add(this.projectOverrideShortcutMenuDirName);
             this.groupBox1.Controls.Add(this.projectRequireDotNetVersion);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.projectLicense);
@@ -647,7 +652,7 @@ namespace WarSetup
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(505, 247);
+            this.groupBox1.Size = new System.Drawing.Size(505, 268);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project Settings";
@@ -836,7 +841,7 @@ namespace WarSetup
             this.sss.Controls.Add(this.label6);
             this.sss.Controls.Add(this.project64BitTarget);
             this.sss.Controls.Add(this.projectType);
-            this.sss.Location = new System.Drawing.Point(8, 259);
+            this.sss.Location = new System.Drawing.Point(8, 280);
             this.sss.Name = "sss";
             this.sss.Size = new System.Drawing.Size(505, 141);
             this.sss.TabIndex = 9;
@@ -912,7 +917,7 @@ namespace WarSetup
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(882, 515);
+            this.tabControl1.Size = new System.Drawing.Size(882, 594);
             this.tabControl1.TabIndex = 2;
             // 
             // tabBootStrap
@@ -1687,11 +1692,33 @@ namespace WarSetup
             this.compilerOutput.TabIndex = 0;
             this.compilerOutput.WordWrap = false;
             // 
+            // projectOverrideShortcutMenuDirName
+            // 
+            this.projectOverrideShortcutMenuDirName.AutoSize = true;
+            this.projectOverrideShortcutMenuDirName.Location = new System.Drawing.Point(18, 240);
+            this.projectOverrideShortcutMenuDirName.Name = "projectOverrideShortcutMenuDirName";
+            this.projectOverrideShortcutMenuDirName.Size = new System.Drawing.Size(208, 17);
+            this.projectOverrideShortcutMenuDirName.TabIndex = 22;
+            this.projectOverrideShortcutMenuDirName.Text = "Override menu shortcut directory name";
+            this.toolTip1.SetToolTip(this.projectOverrideShortcutMenuDirName, "By default any menu shortcuts are in a folder iwth the projects name.  This will " +
+        "allow using a folder with a different name.");
+            this.projectOverrideShortcutMenuDirName.UseVisualStyleBackColor = true;
+            // 
+            // projectShortCutMenuDirName
+            // 
+            this.projectShortCutMenuDirName.Location = new System.Drawing.Point(226, 238);
+            this.projectShortCutMenuDirName.Name = "projectShortCutMenuDirName";
+            this.projectShortCutMenuDirName.Size = new System.Drawing.Size(257, 20);
+            this.projectShortCutMenuDirName.TabIndex = 23;
+            this.projectShortCutMenuDirName.Text = "Directory Name";
+            this.toolTip1.SetToolTip(this.projectShortCutMenuDirName, "By default any menu shortcuts are in a folder iwth the projects name.  This will " +
+        "allow using a folder with a different name.");
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 564);
+            this.ClientSize = new System.Drawing.Size(882, 643);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -1891,6 +1918,9 @@ namespace WarSetup
         private System.Windows.Forms.ToolStripMenuItem openTargetDirectoryToolStripMenuItem;
         private System.Windows.Forms.ComboBox projectRequireDotNetVersion;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox projectShortCutMenuDirName;
+        private System.Windows.Forms.CheckBox projectOverrideShortcutMenuDirName;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TabPage tabBootStrap;
         private System.Windows.Forms.Button buttonAddBootstrap;
         private System.Windows.Forms.ComboBox comboBoxBootStrap;

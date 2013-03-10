@@ -264,6 +264,13 @@ namespace WarSetup
 
                 projectProperties.SelectedObject = currentProject.projectProperties;
 
+
+                projectOverrideShortcutMenuDirName.DataBindings.Clear();
+                projectOverrideShortcutMenuDirName.DataBindings.Add("Checked", currentProject, "overRideMenuShortcutDir");
+
+                projectShortCutMenuDirName.DataBindings.Clear();
+                projectShortCutMenuDirName.DataBindings.Add("Text", currentProject, "menuShortcutDirName");
+
             }
             catch (Exception ex)
             {
