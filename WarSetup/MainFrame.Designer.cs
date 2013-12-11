@@ -122,7 +122,7 @@ namespace WarSetup
             this.featureName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabFiles = new System.Windows.Forms.TabPage();
-            this.currentFileProperties = new System.Windows.Forms.PropertyGrid();
+            this.splitContainerFiles = new System.Windows.Forms.SplitContainer();
             this.fileList = new System.Windows.Forms.ListView();
             this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnDir = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -133,6 +133,7 @@ namespace WarSetup
             this.toolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.setAsMainFeatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smallIcons = new System.Windows.Forms.ImageList(this.components);
+            this.currentFileProperties = new System.Windows.Forms.PropertyGrid();
             this.tabDirectories = new System.Windows.Forms.TabPage();
             this.directoryProperties = new System.Windows.Forms.PropertyGrid();
             this.featureDirectoryList = new System.Windows.Forms.ListView();
@@ -179,7 +180,6 @@ namespace WarSetup
             this.compilerOutput = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.splitContainerFiles = new System.Windows.Forms.SplitContainer();
             this.contextMenuFeatures.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -197,6 +197,10 @@ namespace WarSetup
             this.tabProperties.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.tabFiles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerFiles)).BeginInit();
+            this.splitContainerFiles.Panel1.SuspendLayout();
+            this.splitContainerFiles.Panel2.SuspendLayout();
+            this.splitContainerFiles.SuspendLayout();
             this.contextMenuFileList.SuspendLayout();
             this.tabDirectories.SuspendLayout();
             this.contextMenuDirectories.SuspendLayout();
@@ -208,10 +212,6 @@ namespace WarSetup
             this.groupBox3.SuspendLayout();
             this.contextMenuWixModules.SuspendLayout();
             this.tabOutput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerFiles)).BeginInit();
-            this.splitContainerFiles.Panel1.SuspendLayout();
-            this.splitContainerFiles.Panel2.SuspendLayout();
-            this.splitContainerFiles.SuspendLayout();
             this.SuspendLayout();
             // 
             // featuresTree
@@ -1163,15 +1163,25 @@ namespace WarSetup
             this.tabFiles.Text = "Files";
             this.tabFiles.UseVisualStyleBackColor = true;
             // 
-            // currentFileProperties
+            // splitContainerFiles
             // 
-            this.currentFileProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.splitContainerFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.currentFileProperties.Location = new System.Drawing.Point(0, 3);
-            this.currentFileProperties.Name = "currentFileProperties";
-            this.currentFileProperties.Size = new System.Drawing.Size(598, 250);
-            this.currentFileProperties.TabIndex = 1;
+            this.splitContainerFiles.Location = new System.Drawing.Point(6, 6);
+            this.splitContainerFiles.Name = "splitContainerFiles";
+            this.splitContainerFiles.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerFiles.Panel1
+            // 
+            this.splitContainerFiles.Panel1.Controls.Add(this.fileList);
+            // 
+            // splitContainerFiles.Panel2
+            // 
+            this.splitContainerFiles.Panel2.Controls.Add(this.currentFileProperties);
+            this.splitContainerFiles.Size = new System.Drawing.Size(598, 520);
+            this.splitContainerFiles.SplitterDistance = 260;
+            this.splitContainerFiles.TabIndex = 2;
             // 
             // fileList
             // 
@@ -1256,6 +1266,16 @@ namespace WarSetup
             this.smallIcons.Images.SetKeyName(0, "File.ico");
             this.smallIcons.Images.SetKeyName(1, "MainFeature.ico");
             // 
+            // currentFileProperties
+            // 
+            this.currentFileProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentFileProperties.Location = new System.Drawing.Point(0, 3);
+            this.currentFileProperties.Name = "currentFileProperties";
+            this.currentFileProperties.Size = new System.Drawing.Size(598, 250);
+            this.currentFileProperties.TabIndex = 1;
+            // 
             // tabDirectories
             // 
             this.tabDirectories.Controls.Add(this.directoryProperties);
@@ -1263,7 +1283,7 @@ namespace WarSetup
             this.tabDirectories.Controls.Add(this.label15);
             this.tabDirectories.Location = new System.Drawing.Point(4, 22);
             this.tabDirectories.Name = "tabDirectories";
-            this.tabDirectories.Size = new System.Drawing.Size(610, 457);
+            this.tabDirectories.Size = new System.Drawing.Size(610, 532);
             this.tabDirectories.TabIndex = 2;
             this.tabDirectories.Text = "Directories";
             this.tabDirectories.UseVisualStyleBackColor = true;
@@ -1275,7 +1295,7 @@ namespace WarSetup
             | System.Windows.Forms.AnchorStyles.Right)));
             this.directoryProperties.Location = new System.Drawing.Point(6, 179);
             this.directoryProperties.Name = "directoryProperties";
-            this.directoryProperties.Size = new System.Drawing.Size(605, 256);
+            this.directoryProperties.Size = new System.Drawing.Size(605, 331);
             this.directoryProperties.TabIndex = 2;
             this.directoryProperties.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.directoryProperties_PropertyValueChanged);
             // 
@@ -1351,7 +1371,7 @@ namespace WarSetup
             this.tabShortcuts.Controls.Add(this.shortcutList);
             this.tabShortcuts.Location = new System.Drawing.Point(4, 22);
             this.tabShortcuts.Name = "tabShortcuts";
-            this.tabShortcuts.Size = new System.Drawing.Size(610, 457);
+            this.tabShortcuts.Size = new System.Drawing.Size(610, 532);
             this.tabShortcuts.TabIndex = 3;
             this.tabShortcuts.Text = "Shortcuts";
             this.tabShortcuts.UseVisualStyleBackColor = true;
@@ -1363,7 +1383,7 @@ namespace WarSetup
             | System.Windows.Forms.AnchorStyles.Right)));
             this.shortcutProperties.Location = new System.Drawing.Point(3, 191);
             this.shortcutProperties.Name = "shortcutProperties";
-            this.shortcutProperties.Size = new System.Drawing.Size(604, 324);
+            this.shortcutProperties.Size = new System.Drawing.Size(604, 399);
             this.shortcutProperties.TabIndex = 5;
             this.shortcutProperties.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.shortcutProperties_PropertyValueChanged);
             // 
@@ -1642,7 +1662,7 @@ namespace WarSetup
             this.tabOutput.Controls.Add(this.compilerOutput);
             this.tabOutput.Location = new System.Drawing.Point(4, 22);
             this.tabOutput.Name = "tabOutput";
-            this.tabOutput.Size = new System.Drawing.Size(874, 568);
+            this.tabOutput.Size = new System.Drawing.Size(874, 564);
             this.tabOutput.TabIndex = 3;
             this.tabOutput.Text = "Output";
             this.tabOutput.UseVisualStyleBackColor = true;
@@ -1659,23 +1679,6 @@ namespace WarSetup
             this.compilerOutput.Size = new System.Drawing.Size(874, 463);
             this.compilerOutput.TabIndex = 0;
             this.compilerOutput.WordWrap = false;
-            // 
-            // splitContainerFiles
-            // 
-            this.splitContainerFiles.Location = new System.Drawing.Point(6, 6);
-            this.splitContainerFiles.Name = "splitContainerFiles";
-            this.splitContainerFiles.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainerFiles.Panel1
-            // 
-            this.splitContainerFiles.Panel1.Controls.Add(this.fileList);
-            // 
-            // splitContainerFiles.Panel2
-            // 
-            this.splitContainerFiles.Panel2.Controls.Add(this.currentFileProperties);
-            this.splitContainerFiles.Size = new System.Drawing.Size(598, 520);
-            this.splitContainerFiles.SplitterDistance = 260;
-            this.splitContainerFiles.TabIndex = 2;
             // 
             // MainFrame
             // 
@@ -1714,6 +1717,10 @@ namespace WarSetup
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.tabFiles.ResumeLayout(false);
+            this.splitContainerFiles.Panel1.ResumeLayout(false);
+            this.splitContainerFiles.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerFiles)).EndInit();
+            this.splitContainerFiles.ResumeLayout(false);
             this.contextMenuFileList.ResumeLayout(false);
             this.tabDirectories.ResumeLayout(false);
             this.tabDirectories.PerformLayout();
@@ -1727,10 +1734,6 @@ namespace WarSetup
             this.contextMenuWixModules.ResumeLayout(false);
             this.tabOutput.ResumeLayout(false);
             this.tabOutput.PerformLayout();
-            this.splitContainerFiles.Panel1.ResumeLayout(false);
-            this.splitContainerFiles.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerFiles)).EndInit();
-            this.splitContainerFiles.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
