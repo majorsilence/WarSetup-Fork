@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarSetup", "WarSetup\WarSetup.csproj", "{BA28ACEE-4BEA-4400-815C-6AA7F66072E3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D48BEAD9-85AA-4621-A96A-5DAAB03964BF} = {D48BEAD9-85AA-4621-A96A-5DAAB03964BF}
