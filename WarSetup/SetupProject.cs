@@ -99,7 +99,7 @@ namespace WarSetup
 
 
         #endregion
-        
+
         #region Variables
         private string _projectName;
         private string _projectVersion;
@@ -172,7 +172,7 @@ namespace WarSetup
         {
             get
             {
-                List<String>  paths = new List<String>();
+                List<String> paths = new List<String>();
                 paths.Add(Path.Combine(Shell.warSetupResPath, "Licenses"));
                 if (projectProperties.LicencePath != "")
                     paths.Add(projectProperties.LicencePath);
@@ -230,9 +230,9 @@ namespace WarSetup
 
         public string TargetPathNoExt
         {
-            get 
+            get
             {
-                return  Path.Combine(TargetDirectory, TargetFileNoExt);
+                return Path.Combine(TargetDirectory, TargetFileNoExt);
             }
         }
 
@@ -257,7 +257,7 @@ namespace WarSetup
             set { _menuShortcutDirName = value; }
         }
 
-        
+
         [XmlAttribute("overRideMenuShortcutDir")]
         public bool overRideMenuShortcutDir
         {
@@ -272,7 +272,7 @@ namespace WarSetup
             get { return _projectRunAfterInstall; }
             set { _projectRunAfterInstall = value; }
         }
-        
+
         [XmlAttribute("mainTargetApp")]
         public string mainTargetApp
         {
@@ -287,10 +287,10 @@ namespace WarSetup
             get { return _nextUniqueId; }
             set { _nextUniqueId = value; }
         }
-       
+
         [XmlAttribute("projectName")]
         public string projectName
-        {            
+        {
             get { return _projectName; }
             set { _projectName = value; }
         }
@@ -323,7 +323,7 @@ namespace WarSetup
             set { _projectOrganization = value; }
         }
 
-   
+
         [XmlAttribute("projectFromWindowsVersion")]
         public string projectFromWindowsVersion
         {
@@ -383,14 +383,14 @@ namespace WarSetup
         [XmlElement("projectFeatures")]
         public List<WarSetup.SetupFeature> projectFeatures
         {
-            get 
-            { 
-                return _projectFeatures; 
+            get
+            {
+                return _projectFeatures;
             }
 
-            set 
-            { 
-                _projectFeatures = value; 
+            set
+            {
+                _projectFeatures = value;
             }
         }
 
@@ -434,7 +434,7 @@ namespace WarSetup
         public string projectLicense
         {
             //get { return _projectLicense; }
-            set 
+            set
             {
                 _License = new LicenseData();
                 _License.Name = value;
@@ -507,8 +507,8 @@ namespace WarSetup
             _projectUuid = System.Guid.NewGuid().ToString();
         }
 
- 
-        
+
+
         public void Clear()
         {
             MakeNewGuid();
@@ -666,7 +666,7 @@ namespace WarSetup
         public int GetVersionAsInt(string version)
         {
             int a = 0, b = 0, c = 0;
-            char[] delim =  { '.' };
+            char[] delim = { '.' };
             string[] v = version.Split(delim);
             if (v.Length > 0)
                 a = int.Parse(v[0]);
@@ -697,7 +697,7 @@ namespace WarSetup
                 EnumTargetDirs(feature.childFeatures, dirs);
             }
         }
-     
+
         #endregion
 
         #region Compiler
@@ -924,7 +924,7 @@ namespace WarSetup
 
             foreach (SetupFile file in component.componentFiles)
             {
-                
+
                 XmlElement file_node = doc.CreateElement("File");
                 file_node.SetAttribute("Id", file.fileId);
                 string src_path = Path.Combine(file.srcDirectory, file.srcName);
@@ -1744,7 +1744,7 @@ namespace WarSetup
             return CompileWixModule(wm);
         }
 
-     
+
 
         public bool CompileWixModule(WixModule wm)
         {
@@ -2360,6 +2360,10 @@ namespace WarSetup
                         AddPropertyRef("NETFRAMEWORK40CLIENT");
                         AddCondition("This product requires the .NET Framework 4.0 Client to be installed", "Installed OR NETFRAMEWORK40CLIENT");
                         break;
+                    case ".NET 4.5":
+                        AddPropertyRef("NETFRAMEWORK45");
+                        AddCondition("This application requires .NET Framework 4.5. Please install the .NET Framework then run this installer again.", "Installed OR NETFRAMEWORK45");
+                        break;
                 }
 
                 if (!isMergeModle
@@ -2471,7 +2475,7 @@ namespace WarSetup
 
                 // Save to disk
                 string target_path = TargetPathNoExt + ".wxs";
-               
+
                 XmlTextWriter writer = new XmlTextWriter(target_path, Encoding.UTF8);
                 writer.Formatting = Formatting.Indented;
                 doc.Save(writer);
@@ -2486,7 +2490,7 @@ namespace WarSetup
 
 
                 string target_msi = TargetPath;
-                    
+
 
                 string cmd = "";
 
@@ -2609,7 +2613,7 @@ namespace WarSetup
                     {
                         TimeSpan duration = DateTime.Now - compile_timer;
                         MainFrame.AddToCompilerOutputWindow(
-                            "WarSetup: Time elapsed by light.exe (target generation): " + duration + "\r\n");   
+                            "WarSetup: Time elapsed by light.exe (target generation): " + duration + "\r\n");
                     }
                 }
             }
@@ -2648,7 +2652,7 @@ namespace WarSetup
             }
             else
             {
-                
+
                 _compileDlg = new CompileDlg(null, (int)ProgressE.FINISH, showFinish);
                 _compileDlg.TopLevel = true;
                 _compileDlg.Show();
