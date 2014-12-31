@@ -98,15 +98,20 @@ namespace WarSetup
                         rval = System.Environment.GetEnvironmentVariable("ProgramFiles");
                     if ((rval == null) || (rval == ""))
                         rval = @"C:\Program Files";
-                    
-                    if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.8")))
+
+                    if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.9")))
                     {
-                        // Attempt to use version 3.6 new directory
+                        // Attempt to use version 3.9 new directory
+                        rval = System.IO.Path.Combine(rval, "WiX Toolset v3.9");
+                    }
+                    else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.8")))
+                    {
+                        // Attempt to use version 3.8 new directory
                         rval = System.IO.Path.Combine(rval, "WiX Toolset v3.8");
                     }
                     else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.7")))
                     {
-                        // Attempt to use version 3.6 new directory
+                        // Attempt to use version 3.7 new directory
                         rval = System.IO.Path.Combine(rval, "WiX Toolset v3.7");
                     }
                     else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.6")))
