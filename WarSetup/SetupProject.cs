@@ -464,8 +464,8 @@ namespace WarSetup
         {
             get
             {
-                return new string[] 
-                {                
+                return new string[]
+                {
                     "AdminToolsFolder",
                     "AppDataFolder",
                     "CommonAppDataFolder]",
