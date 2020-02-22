@@ -198,3 +198,7 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 /.vs/
+/Build-Package/*.msi
+/Build-Package/*.wixobj
+/Build-Package/*.wixpdb
+/Build-Package/*.wxs
