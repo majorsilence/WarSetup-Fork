@@ -68,7 +68,7 @@ namespace WarSetup
                 //if (output == null)
                 //    prc.WaitForExit();
                 //else
-                    MainFrame.AddToCompilerOutputWindow(stdout.ReadToEnd());
+                MainFrame.AddToCompilerOutputWindow(stdout.ReadToEnd());
 
                 rval = prc.ExitCode == 0;
             }
@@ -104,12 +104,12 @@ namespace WarSetup
                         // Attempt to use version 3.11 new directory
                         rval = System.IO.Path.Combine(rval, "WiX Toolset v3.11");
                     }
-                   else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.10")))
+                    else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.10")))
                     {
                         // Attempt to use version 3.10 new directory
                         rval = System.IO.Path.Combine(rval, "WiX Toolset v3.10");
                     }
-                   else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.9")))
+                    else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.9")))
                     {
                         // Attempt to use version 3.9 new directory
                         rval = System.IO.Path.Combine(rval, "WiX Toolset v3.9");
@@ -145,7 +145,7 @@ namespace WarSetup
                         rval = Path.Combine(rval, "Windows Installer XML v3");
                     }
 
-                   
+
                     rval = Path.Combine(rval, "bin");
                 }
 
@@ -233,7 +233,7 @@ namespace WarSetup
             string rval = @".\";
 
             int i;
-            for (i = 0; (i < root.Length); i++ )
+            for (i = 0; (i < root.Length); i++)
             {
                 if (root[i].ToLower() != full[i].ToLower())
                 {
@@ -247,7 +247,7 @@ namespace WarSetup
                 }
             }
 
-            
+
             for (; i < full.Length; i++)
             {
                 rval = Path.Combine(rval, full[i]);
