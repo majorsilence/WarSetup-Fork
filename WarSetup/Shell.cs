@@ -99,9 +99,14 @@ namespace WarSetup
                     if ((rval == null) || (rval == ""))
                         rval = @"C:\Program Files";
 
-                    if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.10")))
+                    if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.11")))
                     {
-                        // Attempt to use version 3.9 new directory
+                        // Attempt to use version 3.11 new directory
+                        rval = System.IO.Path.Combine(rval, "WiX Toolset v3.11");
+                    }
+                   else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.10")))
+                    {
+                        // Attempt to use version 3.10 new directory
                         rval = System.IO.Path.Combine(rval, "WiX Toolset v3.10");
                     }
                    else if (System.IO.Directory.Exists(System.IO.Path.Combine(rval, "WiX Toolset v3.9")))
