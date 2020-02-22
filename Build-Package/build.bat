@@ -6,7 +6,7 @@ REM /p:Configuration="Debug" or "Release"
 
 REM ************* Begin x86 *********************************************
 
-"%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" "%CD%\..\WarSetup.sln" /toolsversion:4.0 /p:Configuration="Release";Platform="x86" /t:clean;rebuild /m:4
+"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe" "%CD%\..\WarSetup.sln" /p:Configuration="Release";Platform="x86" /t:clean;rebuild /m:4
 
 
 del .\warsetup-fork-dot-net-4-x86 /Q
